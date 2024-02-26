@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F7D53242B8C74EA00C73310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53232B8C74EA00C73310 /* AppDelegate.swift */; };
+		2F7D53262B8C74EA00C73310 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53252B8C74EA00C73310 /* SceneDelegate.swift */; };
+		2F7D53282B8C74EA00C73310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53272B8C74EA00C73310 /* ViewController.swift */; };
+		2F7D532B2B8C74EA00C73310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7D53292B8C74EA00C73310 /* Main.storyboard */; };
+		2F7D532E2B8C74EA00C73310 /* LinkPassword.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D532C2B8C74EA00C73310 /* LinkPassword.xcdatamodeld */; };
+		2F7D53302B8C74EB00C73310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F7D532F2B8C74EB00C73310 /* Assets.xcassets */; };
+		2F7D53332B8C74EB00C73310 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7D53312B8C74EB00C73310 /* LaunchScreen.storyboard */; };
+		2F7D533E2B8C74EB00C73310 /* LinkPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D533D2B8C74EB00C73310 /* LinkPasswordTests.swift */; };
+		2F7D53482B8C74EB00C73310 /* LinkPasswordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53472B8C74EB00C73310 /* LinkPasswordUITests.swift */; };
+		2F7D534A2B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53492B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F7D533A2B8C74EB00C73310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F7D53182B8C74EA00C73310 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F7D531F2B8C74EA00C73310;
+			remoteInfo = LinkPassword;
+		};
+		2F7D53442B8C74EB00C73310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F7D53182B8C74EA00C73310 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F7D531F2B8C74EA00C73310;
+			remoteInfo = LinkPassword;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F7D53202B8C74EA00C73310 /* LinkPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7D53232B8C74EA00C73310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F7D53252B8C74EA00C73310 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2F7D53272B8C74EA00C73310 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F7D532A2B8C74EA00C73310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2F7D532D2B8C74EA00C73310 /* LinkPassword.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LinkPassword.xcdatamodel; sourceTree = "<group>"; };
+		2F7D532F2B8C74EB00C73310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F7D53322B8C74EB00C73310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F7D53342B8C74EB00C73310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F7D53392B8C74EB00C73310 /* LinkPasswordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkPasswordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7D533D2B8C74EB00C73310 /* LinkPasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordTests.swift; sourceTree = "<group>"; };
+		2F7D53432B8C74EB00C73310 /* LinkPasswordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkPasswordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7D53472B8C74EB00C73310 /* LinkPasswordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordUITests.swift; sourceTree = "<group>"; };
+		2F7D53492B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F7D531D2B8C74EA00C73310 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7D53362B8C74EB00C73310 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7D53402B8C74EB00C73310 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F7D53172B8C74EA00C73310 = {
+			isa = PBXGroup;
+			children = (
+				2F7D53222B8C74EA00C73310 /* LinkPassword */,
+				2F7D533C2B8C74EB00C73310 /* LinkPasswordTests */,
+				2F7D53462B8C74EB00C73310 /* LinkPasswordUITests */,
+				2F7D53212B8C74EA00C73310 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F7D53212B8C74EA00C73310 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F7D53202B8C74EA00C73310 /* LinkPassword.app */,
+				2F7D53392B8C74EB00C73310 /* LinkPasswordTests.xctest */,
+				2F7D53432B8C74EB00C73310 /* LinkPasswordUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F7D53222B8C74EA00C73310 /* LinkPassword */ = {
+			isa = PBXGroup;
+			children = (
+				2F7D53232B8C74EA00C73310 /* AppDelegate.swift */,
+				2F7D53252B8C74EA00C73310 /* SceneDelegate.swift */,
+				2F7D53272B8C74EA00C73310 /* ViewController.swift */,
+				2F7D53292B8C74EA00C73310 /* Main.storyboard */,
+				2F7D532F2B8C74EB00C73310 /* Assets.xcassets */,
+				2F7D53312B8C74EB00C73310 /* LaunchScreen.storyboard */,
+				2F7D53342B8C74EB00C73310 /* Info.plist */,
+				2F7D532C2B8C74EA00C73310 /* LinkPassword.xcdatamodeld */,
+			);
+			path = LinkPassword;
+			sourceTree = "<group>";
+		};
+		2F7D533C2B8C74EB00C73310 /* LinkPasswordTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F7D533D2B8C74EB00C73310 /* LinkPasswordTests.swift */,
+			);
+			path = LinkPasswordTests;
+			sourceTree = "<group>";
+		};
+		2F7D53462B8C74EB00C73310 /* LinkPasswordUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F7D53472B8C74EB00C73310 /* LinkPasswordUITests.swift */,
+				2F7D53492B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift */,
+			);
+			path = LinkPasswordUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F7D531F2B8C74EA00C73310 /* LinkPassword */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F7D534D2B8C74EB00C73310 /* Build configuration list for PBXNativeTarget "LinkPassword" */;
+			buildPhases = (
+				2F7D531C2B8C74EA00C73310 /* Sources */,
+				2F7D531D2B8C74EA00C73310 /* Frameworks */,
+				2F7D531E2B8C74EA00C73310 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LinkPassword;
+			productName = LinkPassword;
+			productReference = 2F7D53202B8C74EA00C73310 /* LinkPassword.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F7D53382B8C74EB00C73310 /* LinkPasswordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F7D53502B8C74EB00C73310 /* Build configuration list for PBXNativeTarget "LinkPasswordTests" */;
+			buildPhases = (
+				2F7D53352B8C74EB00C73310 /* Sources */,
+				2F7D53362B8C74EB00C73310 /* Frameworks */,
+				2F7D53372B8C74EB00C73310 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F7D533B2B8C74EB00C73310 /* PBXTargetDependency */,
+			);
+			name = LinkPasswordTests;
+			productName = LinkPasswordTests;
+			productReference = 2F7D53392B8C74EB00C73310 /* LinkPasswordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2F7D53422B8C74EB00C73310 /* LinkPasswordUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F7D53532B8C74EB00C73310 /* Build configuration list for PBXNativeTarget "LinkPasswordUITests" */;
+			buildPhases = (
+				2F7D533F2B8C74EB00C73310 /* Sources */,
+				2F7D53402B8C74EB00C73310 /* Frameworks */,
+				2F7D53412B8C74EB00C73310 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F7D53452B8C74EB00C73310 /* PBXTargetDependency */,
+			);
+			name = LinkPasswordUITests;
+			productName = LinkPasswordUITests;
+			productReference = 2F7D53432B8C74EB00C73310 /* LinkPasswordUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F7D53182B8C74EA00C73310 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					2F7D531F2B8C74EA00C73310 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					2F7D53382B8C74EB00C73310 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 2F7D531F2B8C74EA00C73310;
+					};
+					2F7D53422B8C74EB00C73310 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 2F7D531F2B8C74EA00C73310;
+					};
+				};
+			};
+			buildConfigurationList = 2F7D531B2B8C74EA00C73310 /* Build configuration list for PBXProject "LinkPassword" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F7D53172B8C74EA00C73310;
+			productRefGroup = 2F7D53212B8C74EA00C73310 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F7D531F2B8C74EA00C73310 /* LinkPassword */,
+				2F7D53382B8C74EB00C73310 /* LinkPasswordTests */,
+				2F7D53422B8C74EB00C73310 /* LinkPasswordUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F7D531E2B8C74EA00C73310 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F7D53332B8C74EB00C73310 /* LaunchScreen.storyboard in Resources */,
+				2F7D53302B8C74EB00C73310 /* Assets.xcassets in Resources */,
+				2F7D532B2B8C74EA00C73310 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7D53372B8C74EB00C73310 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7D53412B8C74EB00C73310 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F7D531C2B8C74EA00C73310 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F7D53282B8C74EA00C73310 /* ViewController.swift in Sources */,
+				2F7D53242B8C74EA00C73310 /* AppDelegate.swift in Sources */,
+				2F7D532E2B8C74EA00C73310 /* LinkPassword.xcdatamodeld in Sources */,
+				2F7D53262B8C74EA00C73310 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7D53352B8C74EB00C73310 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F7D533E2B8C74EB00C73310 /* LinkPasswordTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7D533F2B8C74EB00C73310 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F7D53482B8C74EB00C73310 /* LinkPasswordUITests.swift in Sources */,
+				2F7D534A2B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F7D533B2B8C74EB00C73310 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F7D531F2B8C74EA00C73310 /* LinkPassword */;
+			targetProxy = 2F7D533A2B8C74EB00C73310 /* PBXContainerItemProxy */;
+		};
+		2F7D53452B8C74EB00C73310 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F7D531F2B8C74EA00C73310 /* LinkPassword */;
+			targetProxy = 2F7D53442B8C74EB00C73310 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2F7D53292B8C74EA00C73310 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F7D532A2B8C74EA00C73310 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2F7D53312B8C74EB00C73310 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F7D53322B8C74EB00C73310 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F7D534B2B8C74EB00C73310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F7D534C2B8C74EB00C73310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F7D534E2B8C74EB00C73310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TW9MAJP3U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LinkPassword/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haoyangyip.LinkPassword;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F7D534F2B8C74EB00C73310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TW9MAJP3U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LinkPassword/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haoyangyip.LinkPassword;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F7D53512B8C74EB00C73310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TW9MAJP3U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haoyangyip.LinkPasswordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LinkPassword.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LinkPassword";
+			};
+			name = Debug;
+		};
+		2F7D53522B8C74EB00C73310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TW9MAJP3U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haoyangyip.LinkPasswordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LinkPassword.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LinkPassword";
+			};
+			name = Release;
+		};
+		2F7D53542B8C74EB00C73310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TW9MAJP3U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haoyangyip.LinkPasswordUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LinkPassword;
+			};
+			name = Debug;
+		};
+		2F7D53552B8C74EB00C73310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TW9MAJP3U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haoyangyip.LinkPasswordUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LinkPassword;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F7D531B2B8C74EA00C73310 /* Build configuration list for PBXProject "LinkPassword" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F7D534B2B8C74EB00C73310 /* Debug */,
+				2F7D534C2B8C74EB00C73310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F7D534D2B8C74EB00C73310 /* Build configuration list for PBXNativeTarget "LinkPassword" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F7D534E2B8C74EB00C73310 /* Debug */,
+				2F7D534F2B8C74EB00C73310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F7D53502B8C74EB00C73310 /* Build configuration list for PBXNativeTarget "LinkPasswordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F7D53512B8C74EB00C73310 /* Debug */,
+				2F7D53522B8C74EB00C73310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F7D53532B8C74EB00C73310 /* Build configuration list for PBXNativeTarget "LinkPasswordUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F7D53542B8C74EB00C73310 /* Debug */,
+				2F7D53552B8C74EB00C73310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2F7D532C2B8C74EA00C73310 /* LinkPassword.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F7D532D2B8C74EA00C73310 /* LinkPassword.xcdatamodel */,
+			);
+			currentVersion = 2F7D532D2B8C74EA00C73310 /* LinkPassword.xcdatamodel */;
+			path = LinkPassword.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2F7D53182B8C74EA00C73310 /* Project object */;
+}
