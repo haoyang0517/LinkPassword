@@ -11,7 +11,8 @@ import RxCocoa
 
 
 protocol SplashMenuViewType: BaseViewType {
-    
+    func routeToSignin()
+    func routeToSignup()
 }
 
 typealias SplashMenuViewControllerType = UIViewController & SplashMenuViewType

@@ -13,7 +13,8 @@ import SwifterSwift
 final class SplashMenuViewModel: BaseViewModel {
     
     //MARK: - Inputs
-    
+    let signinDidTap = PublishSubject<Void>()
+
     //MARK: - Outputs
     
     //MARK: - Dependencies
@@ -33,9 +34,14 @@ final class SplashMenuViewModel: BaseViewModel {
     //MARK: - Transform
     override func transform() {
         super.transform()
-        
                 
+        let signinDidTap = signinDidTap
+            .subscribe(onNext: { [weak self] _ in
+                self?.view?.routeToSignin()
+            })
+
         disposeBag.insert(
+            signinDidTap
         )
     }
 }

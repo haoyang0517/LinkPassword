@@ -16,5 +16,6 @@ extension DI {
 extension DI.ViewPairs {
     static func register() {
         Splash.register()
+        SplashMenu.register()
     }
 }

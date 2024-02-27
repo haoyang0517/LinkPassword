@@ -53,14 +53,19 @@
 		2F74FB6E2B8DA2C200FE8DF2 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB6D2B8DA2C200FE8DF2 /* SplashViewModel.swift */; };
 		2F74FB702B8DA2CF00FE8DF2 /* SplashViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB6F2B8DA2CF00FE8DF2 /* SplashViewTypes.swift */; };
 		2F74FB732B8DA82E00FE8DF2 /* splash_lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F74FB722B8DA82E00FE8DF2 /* splash_lottie.json */; };
-		2F74FB772B8DA89C00FE8DF2 /* LottieEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB762B8DA89C00FE8DF2 /* LottieEnum.swift */; };
+		2F74FB772B8DA89C00FE8DF2 /* LinkPasswordEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB762B8DA89C00FE8DF2 /* LinkPasswordEnum.swift */; };
 		2F74FB7A2B8DB51100FE8DF2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB792B8DB51100FE8DF2 /* Constant.swift */; };
-		2F74FB7C2B8DB5A500FE8DF2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB7B2B8DB5A500FE8DF2 /* Color.swift */; };
+		2F74FB7C2B8DB5A500FE8DF2 /* LinkPasswordColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB7B2B8DB5A500FE8DF2 /* LinkPasswordColor.swift */; };
 		2F74FB7F2B8DBFA900FE8DF2 /* SplashMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F74FB7E2B8DBFA900FE8DF2 /* SplashMenuViewController.storyboard */; };
 		2F74FB832B8DBFC600FE8DF2 /* DI+SplashMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB822B8DBFC600FE8DF2 /* DI+SplashMenu.swift */; };
 		2F74FB852B8DBFD800FE8DF2 /* SplashMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB842B8DBFD800FE8DF2 /* SplashMenuViewController.swift */; };
 		2F74FB872B8DBFE000FE8DF2 /* SplashMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB862B8DBFE000FE8DF2 /* SplashMenuViewModel.swift */; };
 		2F74FB892B8DBFE900FE8DF2 /* SplashMenuTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB882B8DBFE900FE8DF2 /* SplashMenuTypes.swift */; };
+		2F74FB8D2B8DC1D000FE8DF2 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB8C2B8DC1D000FE8DF2 /* PrimaryButton.swift */; };
+		2F74FB8F2B8DC43500FE8DF2 /* LinkPasswordFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB8E2B8DC43500FE8DF2 /* LinkPasswordFont.swift */; };
+		2F74FB932B8DC62800FE8DF2 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F74FB922B8DC62800FE8DF2 /* SF-Pro-Text-Regular.otf */; };
+		2F74FB982B8DC84700FE8DF2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB972B8DC84700FE8DF2 /* UIButton+Extension.swift */; };
+		2F74FB9A2B8DC9A500FE8DF2 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB992B8DC9A500FE8DF2 /* SecondaryButton.swift */; };
 		2F7D53242B8C74EA00C73310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53232B8C74EA00C73310 /* AppDelegate.swift */; };
 		2F7D53262B8C74EA00C73310 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53252B8C74EA00C73310 /* SceneDelegate.swift */; };
 		2F7D53282B8C74EA00C73310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53272B8C74EA00C73310 /* ViewController.swift */; };
@@ -138,14 +143,19 @@
 		2F74FB6D2B8DA2C200FE8DF2 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		2F74FB6F2B8DA2CF00FE8DF2 /* SplashViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewTypes.swift; sourceTree = "<group>"; };
 		2F74FB722B8DA82E00FE8DF2 /* splash_lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash_lottie.json; sourceTree = "<group>"; };
-		2F74FB762B8DA89C00FE8DF2 /* LottieEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieEnum.swift; sourceTree = "<group>"; };
+		2F74FB762B8DA89C00FE8DF2 /* LinkPasswordEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordEnum.swift; sourceTree = "<group>"; };
 		2F74FB792B8DB51100FE8DF2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		2F74FB7B2B8DB5A500FE8DF2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		2F74FB7B2B8DB5A500FE8DF2 /* LinkPasswordColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordColor.swift; sourceTree = "<group>"; };
 		2F74FB7E2B8DBFA900FE8DF2 /* SplashMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashMenuViewController.storyboard; sourceTree = "<group>"; };
-		2F74FB822B8DBFC600FE8DF2 /* DI+SplashMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DI+SplashMenu.swift"; sourceTree = "<group>"; };
+		2F74FB822B8DBFC600FE8DF2 /* DI+SplashMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DI+SplashMenu.swift"; sourceTree = "<group>"; wrapsLines = 0; };
 		2F74FB842B8DBFD800FE8DF2 /* SplashMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashMenuViewController.swift; sourceTree = "<group>"; };
 		2F74FB862B8DBFE000FE8DF2 /* SplashMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashMenuViewModel.swift; sourceTree = "<group>"; };
 		2F74FB882B8DBFE900FE8DF2 /* SplashMenuTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashMenuTypes.swift; sourceTree = "<group>"; };
+		2F74FB8C2B8DC1D000FE8DF2 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		2F74FB8E2B8DC43500FE8DF2 /* LinkPasswordFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordFont.swift; sourceTree = "<group>"; };
+		2F74FB922B8DC62800FE8DF2 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		2F74FB972B8DC84700FE8DF2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		2F74FB992B8DC9A500FE8DF2 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		2F7D53202B8C74EA00C73310 /* LinkPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7D53232B8C74EA00C73310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F7D53252B8C74EA00C73310 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +294,7 @@
 			children = (
 				2F74FB332B8CD69B00FE8DF2 /* Architecture */,
 				2F74FB742B8DA88300FE8DF2 /* Constant */,
+				2F74FB952B8DC80A00FE8DF2 /* Helper */,
 				2F74FB422B8CD75C00FE8DF2 /* Modules */,
 				2F74FB592B8CDD5100FE8DF2 /* Utilities */,
 			);
@@ -333,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				2F74FB442B8CD7E900FE8DF2 /* DI */,
+				2F74FB8A2B8DC1B100FE8DF2 /* View */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -439,7 +451,8 @@
 		2F74FB712B8DA79500FE8DF2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				2F74FB722B8DA82E00FE8DF2 /* splash_lottie.json */,
+				2F74FB902B8DC5ED00FE8DF2 /* Lottie */,
+				2F74FB912B8DC5F300FE8DF2 /* Font */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -448,26 +461,11 @@
 			isa = PBXGroup;
 			children = (
 				2F74FB792B8DB51100FE8DF2 /* Constant.swift */,
-				2F74FB752B8DA88F00FE8DF2 /* Enum */,
-				2F74FB782B8DAF5500FE8DF2 /* Color */,
+				2F74FB762B8DA89C00FE8DF2 /* LinkPasswordEnum.swift */,
+				2F74FB7B2B8DB5A500FE8DF2 /* LinkPasswordColor.swift */,
+				2F74FB8E2B8DC43500FE8DF2 /* LinkPasswordFont.swift */,
 			);
 			path = Constant;
-			sourceTree = "<group>";
-		};
-		2F74FB752B8DA88F00FE8DF2 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				2F74FB762B8DA89C00FE8DF2 /* LottieEnum.swift */,
-			);
-			path = Enum;
-			sourceTree = "<group>";
-		};
-		2F74FB782B8DAF5500FE8DF2 /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				2F74FB7B2B8DB5A500FE8DF2 /* Color.swift */,
-			);
-			path = Color;
 			sourceTree = "<group>";
 		};
 		2F74FB7D2B8DBF9000FE8DF2 /* SplashMenu */ = {
@@ -496,6 +494,63 @@
 				2F74FB882B8DBFE900FE8DF2 /* SplashMenuTypes.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		2F74FB8A2B8DC1B100FE8DF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FB8B2B8DC1B900FE8DF2 /* Button */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F74FB8B2B8DC1B900FE8DF2 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FB8C2B8DC1D000FE8DF2 /* PrimaryButton.swift */,
+				2F74FB992B8DC9A500FE8DF2 /* SecondaryButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		2F74FB902B8DC5ED00FE8DF2 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FB722B8DA82E00FE8DF2 /* splash_lottie.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		2F74FB912B8DC5F300FE8DF2 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FB922B8DC62800FE8DF2 /* SF-Pro-Text-Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2F74FB942B8DC7D900FE8DF2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FB962B8DC83200FE8DF2 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2F74FB952B8DC80A00FE8DF2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FB942B8DC7D900FE8DF2 /* Extensions */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2F74FB962B8DC83200FE8DF2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FB972B8DC84700FE8DF2 /* UIButton+Extension.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		2F7D53172B8C74EA00C73310 = {
@@ -684,6 +739,7 @@
 				2F74FB7F2B8DBFA900FE8DF2 /* SplashMenuViewController.storyboard in Resources */,
 				2F74FB732B8DA82E00FE8DF2 /* splash_lottie.json in Resources */,
 				2F74FB662B8DA27800FE8DF2 /* SplashViewController.storyboard in Resources */,
+				2F74FB932B8DC62800FE8DF2 /* SF-Pro-Text-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,7 +814,7 @@
 				2F74FB2D2B8CD5E300FE8DF2 /* ViewEvent.swift in Sources */,
 				2F74FB6C2B8DA2BB00FE8DF2 /* SplashViewController.swift in Sources */,
 				2F74FB022B8CCE3800FE8DF2 /* ViewControllerCycleImplType.swift in Sources */,
-				2F74FB772B8DA89C00FE8DF2 /* LottieEnum.swift in Sources */,
+				2F74FB772B8DA89C00FE8DF2 /* LinkPasswordEnum.swift in Sources */,
 				2F74FB292B8CD5CA00FE8DF2 /* DisposableEvent.swift in Sources */,
 				2F74FB4F2B8CD8BD00FE8DF2 /* DI+Constant.swift in Sources */,
 				2F74FB1F2B8CD58700FE8DF2 /* UIView+DisposeBagHolderType.swift in Sources */,
@@ -789,17 +845,21 @@
 				2F74FB252B8CD5AB00FE8DF2 /* UIViewController+DisposeOnWillRemoveFromParentType.swift in Sources */,
 				2F74FB0B2B8CD49D00FE8DF2 /* DismissWithResultProtocol.swift in Sources */,
 				2F7D53242B8C74EA00C73310 /* AppDelegate.swift in Sources */,
+				2F74FB982B8DC84700FE8DF2 /* UIButton+Extension.swift in Sources */,
 				2F74FB1D2B8CD57C00FE8DF2 /* UIView+Disposable.swift in Sources */,
 				2F7D532E2B8C74EA00C73310 /* LinkPassword.xcdatamodeld in Sources */,
-				2F74FB7C2B8DB5A500FE8DF2 /* Color.swift in Sources */,
+				2F74FB7C2B8DB5A500FE8DF2 /* LinkPasswordColor.swift in Sources */,
 				2F74FB1B2B8CD56E00FE8DF2 /* DisposeOnWillRemoveFromParentType+Extension.swift in Sources */,
 				2F74FB5D2B8CDDA400FE8DF2 /* AssociatedObjectUtility.swift in Sources */,
 				2F74FB692B8DA29500FE8DF2 /* DI+Splash.swift in Sources */,
 				2F74FB132B8CD4C800FE8DF2 /* UIViewController+DismissWithResultProtocol.swift in Sources */,
+				2F74FB8D2B8DC1D000FE8DF2 /* PrimaryButton.swift in Sources */,
 				2F74FB852B8DBFD800FE8DF2 /* SplashMenuViewController.swift in Sources */,
 				2F74FB192B8CD55100FE8DF2 /* DisposeOnWillRemoveFromParentType.swift in Sources */,
 				2F74FB552B8CD9A100FE8DF2 /* DI+Helper.swift in Sources */,
 				2F74FB0D2B8CD4A900FE8DF2 /* DismissWithResultProtocol+Extension.swift in Sources */,
+				2F74FB9A2B8DC9A500FE8DF2 /* SecondaryButton.swift in Sources */,
+				2F74FB8F2B8DC43500FE8DF2 /* LinkPasswordFont.swift in Sources */,
 				2F74FB702B8DA2CF00FE8DF2 /* SplashViewTypes.swift in Sources */,
 				2F74FB412B8CD74500FE8DF2 /* BaseNavigationController.swift in Sources */,
 				2F74FAFA2B8CCD8500FE8DF2 /* Observable+Ext.swift in Sources */,

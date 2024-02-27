@@ -11,7 +11,13 @@ import RxCocoa
 
 class SplashMenuViewController: BaseViewController<SplashMenuViewModel> {
     //MARK: - IBOutlets
+    @IBOutlet weak var logoImageView: UIImageView!
+    
+    @IBOutlet weak var primaryButton: PrimaryButton!
+    @IBOutlet weak var secondaryButton: SecondaryButton!
+    
     //MARK: - Constants
+    
     //MARK: - Vars
     
     //MARK: - Lifecycles
@@ -23,6 +29,9 @@ class SplashMenuViewController: BaseViewController<SplashMenuViewModel> {
     override func setupView() {
         super.setupView()
         view.backgroundColor = .red
+        primaryButton.setTitle("Sign Up", for: .normal)
+        secondaryButton.setTitle("Sign In", for: .normal)
+
     }
     
     override func setupTransformInput() {
@@ -31,10 +40,16 @@ class SplashMenuViewController: BaseViewController<SplashMenuViewModel> {
         viewModel.view = self
         viewModel.startLoad = self.rx.viewDidLoad
         viewModel.startExit = rx.viewWillDisappear
+        
     }
     
     override func subscribe() {
         super.subscribe()
+        
+        primaryButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.signinDidTap)
+            .disposed(by: disposeBag)
     }
 }
 
@@ -46,5 +61,14 @@ extension SplashMenuViewController {
 
 //MARK: - <SplashMenuViewType>
 extension SplashMenuViewController: SplashMenuViewType {
+    func routeToSignin() {
+        print("signin")
+    }
+    
+    func routeToSignup() {
+        print("signup")
+
+    }
+    
     
 }

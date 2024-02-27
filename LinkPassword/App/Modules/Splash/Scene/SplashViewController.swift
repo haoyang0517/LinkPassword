@@ -31,8 +31,9 @@ class SplashViewController: BaseViewController<SplashViewModel> {
         lottieView.contentMode = .scaleAspectFit
         lottieView.loopMode = .playOnce
         lottieView.play { [weak self] (_) in
-//            let screen = DI.resolver.resolve(NoInternetViewControllerType.self)!
-//            SwifterSwift.sharedApplication.keyWindow?.rootViewController = screen
+            guard let self = self else { return }
+            let screen = DI.resolver.resolve(SplashMenuViewControllerType.self)!
+            SwifterSwift.sharedApplication.keyWindow?.rootViewController = screen
         }
 
     }
