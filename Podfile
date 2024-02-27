@@ -33,5 +33,7 @@ target 'LinkPassword' do
   # Utility
   pod 'SwifterSwift', '~> 4.6.0'
 
+  #Lottie
+  pod 'lottie-ios','3.1.5'
 
 end

@@ -1,6 +1,7 @@
 PODS:
   - Differentiator (5.0.0)
   - IQKeyboardManagerSwift (6.5.16)
+  - lottie-ios (3.1.5)
   - RxBiBinding (0.3.5):
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
@@ -38,6 +39,7 @@ PODS:
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 6.5.0)
+  - lottie-ios (= 3.1.5)
   - RxBiBinding (~> 0.3.5)
   - RxCocoa
   - RxDataSources (~> 5.0.0)
@@ -50,6 +52,7 @@ SPEC REPOS:
   trunk:
     - Differentiator
     - IQKeyboardManagerSwift
+    - lottie-ios
     - RxBiBinding
     - RxCocoa
     - RxDataSources
@@ -62,6 +65,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
+  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
   RxBiBinding: c4de0aad6ee668fa73ea6ba423bc0ab5d77b986b
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
@@ -71,6 +75,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 91f114cef69c3b8cd80fa2ac72f1ab8568a9a806
+PODFILE CHECKSUM: 287e202caec6c52490be4bf6a439a414944efb00
 
 COCOAPODS: 1.15.2

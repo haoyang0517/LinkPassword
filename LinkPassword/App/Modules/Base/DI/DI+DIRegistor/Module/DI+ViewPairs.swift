@@ -15,6 +15,6 @@ extension DI {
 
 extension DI.ViewPairs {
     static func register() {
-//        Login.register()
+        Splash.register()
     }
 }
