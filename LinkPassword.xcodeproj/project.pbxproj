@@ -66,6 +66,17 @@
 		2F74FB932B8DC62800FE8DF2 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F74FB922B8DC62800FE8DF2 /* SF-Pro-Text-Regular.otf */; };
 		2F74FB982B8DC84700FE8DF2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB972B8DC84700FE8DF2 /* UIButton+Extension.swift */; };
 		2F74FB9A2B8DC9A500FE8DF2 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB992B8DC9A500FE8DF2 /* SecondaryButton.swift */; };
+		2F74FB9D2B8E1D8500FE8DF2 /* CustomIconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB9C2B8E1D8500FE8DF2 /* CustomIconTextField.swift */; };
+		2F74FBA02B8E1E2A00FE8DF2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FB9F2B8E1E2A00FE8DF2 /* SignupViewController.swift */; };
+		2F74FBA42B8E1E4E00FE8DF2 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FBA32B8E1E4E00FE8DF2 /* SignupViewModel.swift */; };
+		2F74FBA82B8E1E7000FE8DF2 /* SignupTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FBA72B8E1E7000FE8DF2 /* SignupTypes.swift */; };
+		2F74FBAA2B8E1E7C00FE8DF2 /* Di+Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FBA92B8E1E7C00FE8DF2 /* Di+Signup.swift */; };
+		2F74FBAC2B8E1E8A00FE8DF2 /* SignupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F74FBAB2B8E1E8A00FE8DF2 /* SignupViewController.storyboard */; };
+		2F74FBAF2B8E1EB800FE8DF2 /* SigninViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F74FBAE2B8E1EB800FE8DF2 /* SigninViewController.storyboard */; };
+		2F74FBB22B8E1F3200FE8DF2 /* DI+Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FBB12B8E1F3200FE8DF2 /* DI+Signin.swift */; };
+		2F74FBB52B8E1F5300FE8DF2 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FBB42B8E1F5300FE8DF2 /* SigninViewController.swift */; };
+		2F74FBB72B8E1F5E00FE8DF2 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FBB62B8E1F5E00FE8DF2 /* SigninViewModel.swift */; };
+		2F74FBB92B8E1F6800FE8DF2 /* SigninTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FBB82B8E1F6800FE8DF2 /* SigninTypes.swift */; };
 		2F7D53242B8C74EA00C73310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53232B8C74EA00C73310 /* AppDelegate.swift */; };
 		2F7D53262B8C74EA00C73310 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53252B8C74EA00C73310 /* SceneDelegate.swift */; };
 		2F7D53282B8C74EA00C73310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53272B8C74EA00C73310 /* ViewController.swift */; };
@@ -156,6 +167,17 @@
 		2F74FB922B8DC62800FE8DF2 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		2F74FB972B8DC84700FE8DF2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		2F74FB992B8DC9A500FE8DF2 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		2F74FB9C2B8E1D8500FE8DF2 /* CustomIconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconTextField.swift; sourceTree = "<group>"; };
+		2F74FB9F2B8E1E2A00FE8DF2 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		2F74FBA32B8E1E4E00FE8DF2 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		2F74FBA72B8E1E7000FE8DF2 /* SignupTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTypes.swift; sourceTree = "<group>"; };
+		2F74FBA92B8E1E7C00FE8DF2 /* Di+Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Di+Signup.swift"; sourceTree = "<group>"; };
+		2F74FBAB2B8E1E8A00FE8DF2 /* SignupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupViewController.storyboard; sourceTree = "<group>"; };
+		2F74FBAE2B8E1EB800FE8DF2 /* SigninViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SigninViewController.storyboard; sourceTree = "<group>"; };
+		2F74FBB12B8E1F3200FE8DF2 /* DI+Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DI+Signin.swift"; sourceTree = "<group>"; };
+		2F74FBB42B8E1F5300FE8DF2 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		2F74FBB62B8E1F5E00FE8DF2 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
+		2F74FBB82B8E1F6800FE8DF2 /* SigninTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninTypes.swift; sourceTree = "<group>"; };
 		2F7D53202B8C74EA00C73310 /* LinkPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7D53232B8C74EA00C73310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F7D53252B8C74EA00C73310 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -336,6 +358,8 @@
 				2F74FB432B8CD7C900FE8DF2 /* Base */,
 				2F74FB642B8D9F1E00FE8DF2 /* Splash */,
 				2F74FB7D2B8DBF9000FE8DF2 /* SplashMenu */,
+				2F74FB9E2B8E1E1700FE8DF2 /* Signup */,
+				2F74FBAD2B8E1E9300FE8DF2 /* Signin */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -499,18 +523,19 @@
 		2F74FB8A2B8DC1B100FE8DF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2F74FB8B2B8DC1B900FE8DF2 /* Button */,
+				2F74FB9B2B8E1D0300FE8DF2 /* UITextField */,
+				2F74FB8B2B8DC1B900FE8DF2 /* UIButton */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		2F74FB8B2B8DC1B900FE8DF2 /* Button */ = {
+		2F74FB8B2B8DC1B900FE8DF2 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
 				2F74FB8C2B8DC1D000FE8DF2 /* PrimaryButton.swift */,
 				2F74FB992B8DC9A500FE8DF2 /* SecondaryButton.swift */,
 			);
-			path = Button;
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 		2F74FB902B8DC5ED00FE8DF2 /* Lottie */ = {
@@ -551,6 +576,70 @@
 				2F74FB972B8DC84700FE8DF2 /* UIButton+Extension.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		2F74FB9B2B8E1D0300FE8DF2 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FB9C2B8E1D8500FE8DF2 /* CustomIconTextField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		2F74FB9E2B8E1E1700FE8DF2 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FBAB2B8E1E8A00FE8DF2 /* SignupViewController.storyboard */,
+				2F74FBA12B8E1E2F00FE8DF2 /* Constant */,
+				2F74FBA22B8E1E3600FE8DF2 /* Scene */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		2F74FBA12B8E1E2F00FE8DF2 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FBA92B8E1E7C00FE8DF2 /* Di+Signup.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		2F74FBA22B8E1E3600FE8DF2 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FB9F2B8E1E2A00FE8DF2 /* SignupViewController.swift */,
+				2F74FBA32B8E1E4E00FE8DF2 /* SignupViewModel.swift */,
+				2F74FBA72B8E1E7000FE8DF2 /* SignupTypes.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		2F74FBAD2B8E1E9300FE8DF2 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FBAE2B8E1EB800FE8DF2 /* SigninViewController.storyboard */,
+				2F74FBB02B8E1EBB00FE8DF2 /* Constant */,
+				2F74FBB32B8E1F3600FE8DF2 /* Scene */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		2F74FBB02B8E1EBB00FE8DF2 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FBB12B8E1F3200FE8DF2 /* DI+Signin.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		2F74FBB32B8E1F3600FE8DF2 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2F74FBB42B8E1F5300FE8DF2 /* SigninViewController.swift */,
+				2F74FBB62B8E1F5E00FE8DF2 /* SigninViewModel.swift */,
+				2F74FBB82B8E1F6800FE8DF2 /* SigninTypes.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		2F7D53172B8C74EA00C73310 = {
@@ -736,8 +825,10 @@
 				2F7D53332B8C74EB00C73310 /* LaunchScreen.storyboard in Resources */,
 				2F7D53302B8C74EB00C73310 /* Assets.xcassets in Resources */,
 				2F7D532B2B8C74EA00C73310 /* Main.storyboard in Resources */,
+				2F74FBAC2B8E1E8A00FE8DF2 /* SignupViewController.storyboard in Resources */,
 				2F74FB7F2B8DBFA900FE8DF2 /* SplashMenuViewController.storyboard in Resources */,
 				2F74FB732B8DA82E00FE8DF2 /* splash_lottie.json in Resources */,
+				2F74FBAF2B8E1EB800FE8DF2 /* SigninViewController.storyboard in Resources */,
 				2F74FB662B8DA27800FE8DF2 /* SplashViewController.storyboard in Resources */,
 				2F74FB932B8DC62800FE8DF2 /* SF-Pro-Text-Regular.otf in Resources */,
 			);
@@ -808,8 +899,10 @@
 			files = (
 				2F74FB632B8CDF1A00FE8DF2 /* DisposeBagHolderType+Extension.swift in Sources */,
 				2F74FB212B8CD59300FE8DF2 /* UIViewController+Disposable.swift in Sources */,
+				2F74FBB52B8E1F5300FE8DF2 /* SigninViewController.swift in Sources */,
 				2F74FB892B8DBFE900FE8DF2 /* SplashMenuTypes.swift in Sources */,
 				2F74FB232B8CD59F00FE8DF2 /* UIViewController+DisposeBagHolderType.swift in Sources */,
+				2F74FBA02B8E1E2A00FE8DF2 /* SignupViewController.swift in Sources */,
 				2F74FAF72B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift in Sources */,
 				2F74FB2D2B8CD5E300FE8DF2 /* ViewEvent.swift in Sources */,
 				2F74FB6C2B8DA2BB00FE8DF2 /* SplashViewController.swift in Sources */,
@@ -817,16 +910,20 @@
 				2F74FB772B8DA89C00FE8DF2 /* LinkPasswordEnum.swift in Sources */,
 				2F74FB292B8CD5CA00FE8DF2 /* DisposableEvent.swift in Sources */,
 				2F74FB4F2B8CD8BD00FE8DF2 /* DI+Constant.swift in Sources */,
+				2F74FBA42B8E1E4E00FE8DF2 /* SignupViewModel.swift in Sources */,
 				2F74FB1F2B8CD58700FE8DF2 /* UIView+DisposeBagHolderType.swift in Sources */,
 				2F74FB3A2B8CD70700FE8DF2 /* BaseViewModelType.swift in Sources */,
 				2F74FB312B8CD5FB00FE8DF2 /* ViewModelType.swift in Sources */,
 				2F74FB172B8CD54600FE8DF2 /* AppWindow.swift in Sources */,
+				2F74FBB22B8E1F3200FE8DF2 /* DI+Signin.swift in Sources */,
 				2F74FB872B8DBFE000FE8DF2 /* SplashMenuViewModel.swift in Sources */,
 				2F74FB0F2B8CD4B400FE8DF2 /* DismissWithResultProtocol+Rx.swift in Sources */,
 				2F74FB112B8CD4BE00FE8DF2 /* UIViewController+DismissWithResultHelper.swift in Sources */,
+				2F74FBB72B8E1F5E00FE8DF2 /* SigninViewModel.swift in Sources */,
 				2F74FB6E2B8DA2C200FE8DF2 /* SplashViewModel.swift in Sources */,
 				2F74FB7A2B8DB51100FE8DF2 /* Constant.swift in Sources */,
 				2F74FB092B8CD48400FE8DF2 /* DismissResult.swift in Sources */,
+				2F74FB9D2B8E1D8500FE8DF2 /* CustomIconTextField.swift in Sources */,
 				2F74FB382B8CD6FB00FE8DF2 /* BaseViewController.swift in Sources */,
 				2F74FB2B2B8CD5D600FE8DF2 /* PresentationBinding.swift in Sources */,
 				2F74FB4C2B8CD8A600FE8DF2 /* DI+Model.swift in Sources */,
@@ -836,6 +933,7 @@
 				2F74FB2F2B8CD5EF00FE8DF2 /* ViewType.swift in Sources */,
 				2F74FB362B8CD6F200FE8DF2 /* BaseViewType.swift in Sources */,
 				2F74FB3C2B8CD71300FE8DF2 /* BaseViewModel.swift in Sources */,
+				2F74FBA82B8E1E7000FE8DF2 /* SignupTypes.swift in Sources */,
 				2F74FAFC2B8CCDBF00FE8DF2 /* RxOperator.swift in Sources */,
 				2F74FB462B8CD83000FE8DF2 /* DI.swift in Sources */,
 				2F74FB832B8DBFC600FE8DF2 /* DI+SplashMenu.swift in Sources */,
@@ -844,6 +942,7 @@
 				2F74FB582B8CD9C200FE8DF2 /* DI+Service.swift in Sources */,
 				2F74FB252B8CD5AB00FE8DF2 /* UIViewController+DisposeOnWillRemoveFromParentType.swift in Sources */,
 				2F74FB0B2B8CD49D00FE8DF2 /* DismissWithResultProtocol.swift in Sources */,
+				2F74FBB92B8E1F6800FE8DF2 /* SigninTypes.swift in Sources */,
 				2F7D53242B8C74EA00C73310 /* AppDelegate.swift in Sources */,
 				2F74FB982B8DC84700FE8DF2 /* UIButton+Extension.swift in Sources */,
 				2F74FB1D2B8CD57C00FE8DF2 /* UIView+Disposable.swift in Sources */,
@@ -858,6 +957,7 @@
 				2F74FB192B8CD55100FE8DF2 /* DisposeOnWillRemoveFromParentType.swift in Sources */,
 				2F74FB552B8CD9A100FE8DF2 /* DI+Helper.swift in Sources */,
 				2F74FB0D2B8CD4A900FE8DF2 /* DismissWithResultProtocol+Extension.swift in Sources */,
+				2F74FBAA2B8E1E7C00FE8DF2 /* Di+Signup.swift in Sources */,
 				2F74FB9A2B8DC9A500FE8DF2 /* SecondaryButton.swift in Sources */,
 				2F74FB8F2B8DC43500FE8DF2 /* LinkPasswordFont.swift in Sources */,
 				2F74FB702B8DA2CF00FE8DF2 /* SplashViewTypes.swift in Sources */,
