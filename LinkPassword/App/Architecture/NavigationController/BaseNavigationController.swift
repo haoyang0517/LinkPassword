@@ -35,36 +35,37 @@ class BaseNavigationController: UINavigationController, BaseViewType, UINavigati
 
     }
 //    //MARK: <UINavigationControllerDelegate>
-//    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-//        if self.presentingViewController != nil {
-//            if self.viewControllers.first == viewController {
-//                if viewController.leftBarItem == nil {
-//                    viewController.leftBarItem = .close()
-//                }
-//            } else {
-//                if viewController.leftBarItem == nil {
-//                    viewController.leftBarItem = .back()
-//                }
-//            }
-//        } else {
-//            if self.viewControllers.first == viewController {
-//                if viewController.leftBarItem == nil {
-//                    viewController.leftBarItem = nil
-//                }
-//            } else {
-//                if viewController.leftBarItem == nil {
-//                    viewController.leftBarItem = .back()
-//                }
-//            }
-//        }
-//        if let child = (viewController as? BaseNavigationChildViewController) {
-//            if let willShow = child.willShowInNavigationController {
-//                willShow(navigationController, animated)
-//            }
-//            if let getIsNavigationBarHidden = child.isNavigationBarHidden {
-//                self.isNavigationBarHidden = getIsNavigationBarHidden
-//            }
-//        }
-//    }
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        let backIconColor = UIColor(hexString: "#004351") ?? UIColor.black
+        if self.presentingViewController != nil {
+            if self.viewControllers.first == viewController {
+                if viewController.leftBarItem == nil {
+                    viewController.leftBarItem = .close()
+                }
+            } else {
+                if viewController.leftBarItem == nil {
+                    viewController.leftBarItem = .back(color: backIconColor)
+                }
+            }
+        } else {
+            if self.viewControllers.first == viewController {
+                if viewController.leftBarItem == nil {
+                    viewController.leftBarItem = nil
+                }
+            } else {
+                if viewController.leftBarItem == nil {
+                    viewController.leftBarItem = .back(color: backIconColor)
+                }
+            }
+        }
+        if let child = (viewController as? BaseNavigationChildViewController) {
+            if let willShow = child.willShowInNavigationController {
+                willShow(navigationController, animated)
+            }
+            if let getIsNavigationBarHidden = child.isNavigationBarHidden {
+                self.isNavigationBarHidden = getIsNavigationBarHidden
+            }
+        }
+    }
 
 }

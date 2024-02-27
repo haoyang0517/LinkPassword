@@ -87,6 +87,12 @@
 		2F7D533E2B8C74EB00C73310 /* LinkPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D533D2B8C74EB00C73310 /* LinkPasswordTests.swift */; };
 		2F7D53482B8C74EB00C73310 /* LinkPasswordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53472B8C74EB00C73310 /* LinkPasswordUITests.swift */; };
 		2F7D534A2B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53492B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift */; };
+		2FB1B9102B8E2D1400D5C0F6 /* BarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B90F2B8E2D1400D5C0F6 /* BarItem.swift */; };
+		2FB1B9122B8E2D4E00D5C0F6 /* BarItemViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B9112B8E2D4E00D5C0F6 /* BarItemViewType.swift */; };
+		2FB1B9142B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B9132B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift */; };
+		2FB1B9162B8E2D6100D5C0F6 /* UIViewController+RxBarItemsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B9152B8E2D6100D5C0F6 /* UIViewController+RxBarItemsViewType.swift */; };
+		2FB1B91B2B8E2E3C00D5C0F6 /* BackBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B91A2B8E2E3C00D5C0F6 /* BackBarItem.swift */; };
+		2FB1B91D2B8E2EE500D5C0F6 /* CloseBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B91C2B8E2EE500D5C0F6 /* CloseBarItem.swift */; };
 		B4605CB4DFE60B60C017B050 /* Pods_LinkPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC5C471481F999D9410DF93 /* Pods_LinkPassword.framework */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +198,12 @@
 		2F7D53432B8C74EB00C73310 /* LinkPasswordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkPasswordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7D53472B8C74EB00C73310 /* LinkPasswordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordUITests.swift; sourceTree = "<group>"; };
 		2F7D53492B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2FB1B90F2B8E2D1400D5C0F6 /* BarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItem.swift; sourceTree = "<group>"; };
+		2FB1B9112B8E2D4E00D5C0F6 /* BarItemViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItemViewType.swift; sourceTree = "<group>"; };
+		2FB1B9132B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BarItemsViewType.swift"; sourceTree = "<group>"; };
+		2FB1B9152B8E2D6100D5C0F6 /* UIViewController+RxBarItemsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxBarItemsViewType.swift"; sourceTree = "<group>"; };
+		2FB1B91A2B8E2E3C00D5C0F6 /* BackBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBarItem.swift; sourceTree = "<group>"; };
+		2FB1B91C2B8E2EE500D5C0F6 /* CloseBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseBarItem.swift; sourceTree = "<group>"; };
 		9EC5C471481F999D9410DF93 /* Pods_LinkPassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkPassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3C16C69E735EF7B72071B9 /* Pods-LinkPassword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkPassword.debug.xcconfig"; path = "Target Support Files/Pods-LinkPassword/Pods-LinkPassword.debug.xcconfig"; sourceTree = "<group>"; };
 		F82EECC2BC7354E06E2FAA49 /* Pods-LinkPassword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkPassword.release.xcconfig"; path = "Target Support Files/Pods-LinkPassword/Pods-LinkPassword.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,7 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				2F74FAF52B8CCCF000FE8DF2 /* ViewControllerCycle */,
-				2F74FB062B8CD13F00FE8DF2 /* Bar */,
+				2F74FB062B8CD13F00FE8DF2 /* BarItem */,
 				2F74FB072B8CD46000FE8DF2 /* DismissWithResult */,
 				2F74FB142B8CD4D700FE8DF2 /* Dispose */,
 				2F74FB152B8CD4E800FE8DF2 /* MVVM */,
@@ -264,11 +276,15 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		2F74FB062B8CD13F00FE8DF2 /* Bar */ = {
+		2F74FB062B8CD13F00FE8DF2 /* BarItem */ = {
 			isa = PBXGroup;
 			children = (
+				2FB1B90F2B8E2D1400D5C0F6 /* BarItem.swift */,
+				2FB1B9112B8E2D4E00D5C0F6 /* BarItemViewType.swift */,
+				2FB1B9132B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift */,
+				2FB1B9152B8E2D6100D5C0F6 /* UIViewController+RxBarItemsViewType.swift */,
 			);
-			path = Bar;
+			path = BarItem;
 			sourceTree = "<group>";
 		};
 		2F74FB072B8CD46000FE8DF2 /* DismissWithResult */ = {
@@ -326,6 +342,7 @@
 		2F74FB332B8CD69B00FE8DF2 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				2FB1B9172B8E2DF200D5C0F6 /* BarItem */,
 				2F74FB342B8CD6E100FE8DF2 /* MVVM */,
 				2F74FB3D2B8CD72000FE8DF2 /* NavigationController */,
 			);
@@ -699,6 +716,15 @@
 			path = LinkPasswordUITests;
 			sourceTree = "<group>";
 		};
+		2FB1B9172B8E2DF200D5C0F6 /* BarItem */ = {
+			isa = PBXGroup;
+			children = (
+				2FB1B91A2B8E2E3C00D5C0F6 /* BackBarItem.swift */,
+				2FB1B91C2B8E2EE500D5C0F6 /* CloseBarItem.swift */,
+			);
+			path = BarItem;
+			sourceTree = "<group>";
+		};
 		DF496D8105BCBA761E029E80 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -907,6 +933,7 @@
 				2F74FB2D2B8CD5E300FE8DF2 /* ViewEvent.swift in Sources */,
 				2F74FB6C2B8DA2BB00FE8DF2 /* SplashViewController.swift in Sources */,
 				2F74FB022B8CCE3800FE8DF2 /* ViewControllerCycleImplType.swift in Sources */,
+				2FB1B9102B8E2D1400D5C0F6 /* BarItem.swift in Sources */,
 				2F74FB772B8DA89C00FE8DF2 /* LinkPasswordEnum.swift in Sources */,
 				2F74FB292B8CD5CA00FE8DF2 /* DisposableEvent.swift in Sources */,
 				2F74FB4F2B8CD8BD00FE8DF2 /* DI+Constant.swift in Sources */,
@@ -923,6 +950,7 @@
 				2F74FB6E2B8DA2C200FE8DF2 /* SplashViewModel.swift in Sources */,
 				2F74FB7A2B8DB51100FE8DF2 /* Constant.swift in Sources */,
 				2F74FB092B8CD48400FE8DF2 /* DismissResult.swift in Sources */,
+				2FB1B9122B8E2D4E00D5C0F6 /* BarItemViewType.swift in Sources */,
 				2F74FB9D2B8E1D8500FE8DF2 /* CustomIconTextField.swift in Sources */,
 				2F74FB382B8CD6FB00FE8DF2 /* BaseViewController.swift in Sources */,
 				2F74FB2B2B8CD5D600FE8DF2 /* PresentationBinding.swift in Sources */,
@@ -935,15 +963,18 @@
 				2F74FB3C2B8CD71300FE8DF2 /* BaseViewModel.swift in Sources */,
 				2F74FBA82B8E1E7000FE8DF2 /* SignupTypes.swift in Sources */,
 				2F74FAFC2B8CCDBF00FE8DF2 /* RxOperator.swift in Sources */,
+				2FB1B9142B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift in Sources */,
 				2F74FB462B8CD83000FE8DF2 /* DI.swift in Sources */,
 				2F74FB832B8DBFC600FE8DF2 /* DI+SplashMenu.swift in Sources */,
 				2F74FB5F2B8CDDAE00FE8DF2 /* WeakAssociateObjectUtility.swift in Sources */,
 				2F7D53282B8C74EA00C73310 /* ViewController.swift in Sources */,
+				2FB1B91B2B8E2E3C00D5C0F6 /* BackBarItem.swift in Sources */,
 				2F74FB582B8CD9C200FE8DF2 /* DI+Service.swift in Sources */,
 				2F74FB252B8CD5AB00FE8DF2 /* UIViewController+DisposeOnWillRemoveFromParentType.swift in Sources */,
 				2F74FB0B2B8CD49D00FE8DF2 /* DismissWithResultProtocol.swift in Sources */,
 				2F74FBB92B8E1F6800FE8DF2 /* SigninTypes.swift in Sources */,
 				2F7D53242B8C74EA00C73310 /* AppDelegate.swift in Sources */,
+				2FB1B9162B8E2D6100D5C0F6 /* UIViewController+RxBarItemsViewType.swift in Sources */,
 				2F74FB982B8DC84700FE8DF2 /* UIButton+Extension.swift in Sources */,
 				2F74FB1D2B8CD57C00FE8DF2 /* UIView+Disposable.swift in Sources */,
 				2F7D532E2B8C74EA00C73310 /* LinkPassword.xcdatamodeld in Sources */,
@@ -965,6 +996,7 @@
 				2F74FAFA2B8CCD8500FE8DF2 /* Observable+Ext.swift in Sources */,
 				2F74FB3F2B8CD73900FE8DF2 /* BaseNavigationChildViewController.swift in Sources */,
 				2F7D53262B8C74EA00C73310 /* SceneDelegate.swift in Sources */,
+				2FB1B91D2B8E2EE500D5C0F6 /* CloseBarItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

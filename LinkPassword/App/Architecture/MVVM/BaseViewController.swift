@@ -46,11 +46,8 @@ class BaseViewController<VM> : UIViewController, BaseViewType, ViewType, BaseNav
         view.backgroundColor = LinkPassword.Colors.bgColor
         if #available(iOS 15.0, *) {
             let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-//            appearance.backgroundColor = .white
-//            appearance.shadowColor = .white
-//            appearance.titleTextAttributes = [.foregroundColor: .black]
-//            appearance.largeTitleTextAttributes = [.foregroundColor: .black]
+            appearance.configureWithTransparentBackground()
+            
             navigationController?.navigationBar.standardAppearance = appearance
             navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
         } else {
