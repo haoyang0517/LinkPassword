@@ -13,8 +13,8 @@ class SplashMenuViewController: BaseViewController<SplashMenuViewModel> {
     //MARK: - IBOutlets
     @IBOutlet weak var logoImageView: UIImageView!
     
-    @IBOutlet weak var primaryButton: PrimaryButton!
-    @IBOutlet weak var secondaryButton: SecondaryButton!
+    @IBOutlet weak var signupButton: PrimaryButton!
+    @IBOutlet weak var signinButton: SecondaryButton!
     
     //MARK: - Constants
     
@@ -28,10 +28,8 @@ class SplashMenuViewController: BaseViewController<SplashMenuViewModel> {
     
     override func setupView() {
         super.setupView()
-        view.backgroundColor = .red
-        primaryButton.setTitle("Sign Up", for: .normal)
-        secondaryButton.setTitle("Sign In", for: .normal)
-
+        signupButton.setTitle("Sign Up", for: .normal)
+        signinButton.setTitle("Sign In", for: .normal)
     }
     
     override func setupTransformInput() {
@@ -46,10 +44,16 @@ class SplashMenuViewController: BaseViewController<SplashMenuViewModel> {
     override func subscribe() {
         super.subscribe()
         
-        primaryButton.rx.tap
+        signupButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.signupDidTap)
+            .disposed(by: disposeBag)
+        
+        signinButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.signinDidTap)
             .disposed(by: disposeBag)
+
     }
 }
 

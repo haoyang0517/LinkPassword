@@ -57,8 +57,8 @@
                     </view>
                     <connections>
                         <outlet property="logoImageView" destination="Xid-QH-Z5L" id="WRp-p3-Rp1"/>
-                        <outlet property="primaryButton" destination="YT2-YO-sL6" id="lK6-jZ-tqu"/>
-                        <outlet property="secondaryButton" destination="c3B-Vi-oxF" id="44i-vx-S4V"/>
+                        <outlet property="signinButton" destination="c3B-Vi-oxF" id="44i-vx-S4V"/>
+                        <outlet property="signupButton" destination="YT2-YO-sL6" id="lK6-jZ-tqu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

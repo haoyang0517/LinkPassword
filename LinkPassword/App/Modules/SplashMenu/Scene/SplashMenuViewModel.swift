@@ -14,6 +14,7 @@ final class SplashMenuViewModel: BaseViewModel {
     
     //MARK: - Inputs
     let signinDidTap = PublishSubject<Void>()
+    let signupDidTap = PublishSubject<Void>()
 
     //MARK: - Outputs
     
@@ -40,8 +41,14 @@ final class SplashMenuViewModel: BaseViewModel {
                 self?.view?.routeToSignin()
             })
 
+        let signupDidTap = signupDidTap
+            .subscribe(onNext: { [weak self] _ in
+                self?.view?.routeToSignup()
+            })
+
         disposeBag.insert(
-            signinDidTap
+            signinDidTap,
+            signupDidTap
         )
     }
 }
