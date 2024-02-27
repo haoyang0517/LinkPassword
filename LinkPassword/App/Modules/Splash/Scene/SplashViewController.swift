@@ -33,7 +33,8 @@ class SplashViewController: BaseViewController<SplashViewModel> {
         lottieView.play { [weak self] (_) in
             guard let self = self else { return }
             let screen = DI.resolver.resolve(SplashMenuViewControllerType.self)!
-            SwifterSwift.sharedApplication.keyWindow?.rootViewController = screen
+            let nav = BaseNavigationController(rootViewController: screen)
+            SwifterSwift.sharedApplication.keyWindow?.rootViewController = nav
         }
 
     }

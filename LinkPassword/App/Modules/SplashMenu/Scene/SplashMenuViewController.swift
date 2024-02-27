@@ -26,6 +26,14 @@ class SplashMenuViewController: BaseViewController<SplashMenuViewModel> {
         viewModel = DI.resolver.resolve(SplashMenuViewModel.self)!
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func setupView() {
         super.setupView()
         signupButton.setTitle("Sign Up", for: .normal)
@@ -66,12 +74,13 @@ extension SplashMenuViewController {
 //MARK: - <SplashMenuViewType>
 extension SplashMenuViewController: SplashMenuViewType {
     func routeToSignin() {
-        print("signin")
+        let screen = DI.resolver.resolve(SigninViewControllerType.self)!
+        self.navigationController?.pushViewController(screen)
     }
     
     func routeToSignup() {
-        print("signup")
-
+        let screen = DI.resolver.resolve(SignupViewControllerType.self)!
+        self.navigationController?.pushViewController(screen)
     }
     
     
