@@ -19,5 +19,10 @@ extension DI.ViewPairs {
         SplashMenu.register()
         Signup.register()
         Signin.register()
+        Home.register()
+        Settings.register()
+        DiscoverPassword.register()
+        ChangePassword.register()
+        Verification.register()
     }
 }
