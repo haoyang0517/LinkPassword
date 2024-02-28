@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F089A0D2B8E44E1000E9F56 /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F089A0C2B8E44E1000E9F56 /* Sora-Regular.ttf */; };
+		2F0CB5E92B8E49F4005C871A /* LinkPasswordImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB5E82B8E49F4005C871A /* LinkPasswordImage.swift */; };
+		2F0CB5EB2B8EB5C7005C871A /* Sora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0CB5EA2B8EB5C7005C871A /* Sora-SemiBold.ttf */; };
 		2F74FAF72B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAF62B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift */; };
 		2F74FAFA2B8CCD8500FE8DF2 /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAF92B8CCD8500FE8DF2 /* Observable+Ext.swift */; };
 		2F74FAFC2B8CCDBF00FE8DF2 /* RxOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAFB2B8CCDBF00FE8DF2 /* RxOperator.swift */; };
@@ -114,6 +117,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F089A0C2B8E44E1000E9F56 /* Sora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Regular.ttf"; sourceTree = "<group>"; };
+		2F0CB5E82B8E49F4005C871A /* LinkPasswordImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordImage.swift; sourceTree = "<group>"; };
+		2F0CB5EA2B8EB5C7005C871A /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-SemiBold.ttf"; sourceTree = "<group>"; };
 		2F74FAF62B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxViewControllerCycle.swift"; sourceTree = "<group>"; };
 		2F74FAF92B8CCD8500FE8DF2 /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		2F74FAFB2B8CCDBF00FE8DF2 /* RxOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxOperator.swift; sourceTree = "<group>"; };
@@ -505,6 +511,7 @@
 				2F74FB762B8DA89C00FE8DF2 /* LinkPasswordEnum.swift */,
 				2F74FB7B2B8DB5A500FE8DF2 /* LinkPasswordColor.swift */,
 				2F74FB8E2B8DC43500FE8DF2 /* LinkPasswordFont.swift */,
+				2F0CB5E82B8E49F4005C871A /* LinkPasswordImage.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -567,6 +574,8 @@
 			isa = PBXGroup;
 			children = (
 				2F74FB922B8DC62800FE8DF2 /* SF-Pro-Text-Regular.otf */,
+				2F089A0C2B8E44E1000E9F56 /* Sora-Regular.ttf */,
+				2F0CB5EA2B8EB5C7005C871A /* Sora-SemiBold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -849,9 +858,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F7D53332B8C74EB00C73310 /* LaunchScreen.storyboard in Resources */,
+				2F0CB5EB2B8EB5C7005C871A /* Sora-SemiBold.ttf in Resources */,
 				2F7D53302B8C74EB00C73310 /* Assets.xcassets in Resources */,
 				2F7D532B2B8C74EA00C73310 /* Main.storyboard in Resources */,
 				2F74FBAC2B8E1E8A00FE8DF2 /* SignupViewController.storyboard in Resources */,
+				2F089A0D2B8E44E1000E9F56 /* Sora-Regular.ttf in Resources */,
 				2F74FB7F2B8DBFA900FE8DF2 /* SplashMenuViewController.storyboard in Resources */,
 				2F74FB732B8DA82E00FE8DF2 /* splash_lottie.json in Resources */,
 				2F74FBAF2B8E1EB800FE8DF2 /* SigninViewController.storyboard in Resources */,
@@ -981,6 +992,7 @@
 				2F74FB7C2B8DB5A500FE8DF2 /* LinkPasswordColor.swift in Sources */,
 				2F74FB1B2B8CD56E00FE8DF2 /* DisposeOnWillRemoveFromParentType+Extension.swift in Sources */,
 				2F74FB5D2B8CDDA400FE8DF2 /* AssociatedObjectUtility.swift in Sources */,
+				2F0CB5E92B8E49F4005C871A /* LinkPasswordImage.swift in Sources */,
 				2F74FB692B8DA29500FE8DF2 /* DI+Splash.swift in Sources */,
 				2F74FB132B8CD4C800FE8DF2 /* UIViewController+DismissWithResultProtocol.swift in Sources */,
 				2F74FB8D2B8DC1D000FE8DF2 /* PrimaryButton.swift in Sources */,

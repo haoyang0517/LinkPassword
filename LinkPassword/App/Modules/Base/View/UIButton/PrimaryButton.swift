@@ -20,19 +20,19 @@ class PrimaryButton: UIButton {
     
 //    override var isEnabled: Bool {
 //        didSet {
-//            self.backgroundColor = isEnabled ? .primaryBtnColor : .primaryBtnColor
+//            self.backgroundColor = isEnabled ? .PrimaryBtnColor : .PrimaryBtnColor
 //        }
 //    }
 //    
 //    override var isHighlighted: Bool {
 //        didSet {
 //            super.isHighlighted = isHighlighted
-//            backgroundColor = isHighlighted ? .primaryBtnColor : .primaryBtnColor
+//            backgroundColor = isHighlighted ? .PrimaryBtnColor : .PrimaryBtnColor
 //        }
 //    }
     
     private func commonInit() {
-        self.backgroundColor = LinkPassword.Colors.primaryBtnColor
+        self.backgroundColor = LinkPassword.Colors.PrimaryBtnColor
         self.setTitleColor(.white, for: .normal)
         self.setTitleColor(.white, for: .disabled)
         self.clipsToBounds = true

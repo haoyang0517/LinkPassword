@@ -9,8 +9,11 @@ import Foundation
 import UIKit
 
 extension LinkPassword.Colors {
-    static let bgColor: UIColor = UIColor(hexString: "#EAF0F7")!
-    static let primaryBtnColor: UIColor = UIColor(hexString: "#29B786")!
+    static let BgColor: UIColor = UIColor(hexString: "#EAF0F7")!
+    static let PrimaryBtnColor: UIColor = UIColor(hexString: "#29B786")!
     static let SecondaryBtnColor: UIColor = UIColor(hexString: "#004351")!
+    static let PrimaryText: UIColor = UIColor(hexString: "#004351")!
+    static let SecondaryText: UIColor = UIColor(hexString: "#879EA4")!
+    static let TextFieldBorder: UIColor = UIColor(hexString: "#1F5460")!
 
 }

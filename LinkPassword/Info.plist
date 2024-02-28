@@ -24,6 +24,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>SF-Pro-Text-Regular.otf</string>
+		<string>Sora-Regular.ttf</string>
+		<string>Sora-SemiBold.ttf</string>
 	</array>
 </dict>
 </plist>

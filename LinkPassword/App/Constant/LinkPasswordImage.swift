@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import UIKit
+
+extension LinkPassword.Images {
+    static let textfieldUsername: UIImage = UIImage(named: "textfield_username")!
+    static let textfieldEmail: UIImage = UIImage(named: "textfield_email")!
+    static let textfieldPassword: UIImage = UIImage(named: "textfield_password")!
+}

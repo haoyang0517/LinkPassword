@@ -43,7 +43,7 @@ class BaseViewController<VM> : UIViewController, BaseViewType, ViewType, BaseNav
         transform()
         subscribe()
         subscribeAnalytics()
-        view.backgroundColor = LinkPassword.Colors.bgColor
+        view.backgroundColor = LinkPassword.Colors.BgColor
         if #available(iOS 15.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithTransparentBackground()

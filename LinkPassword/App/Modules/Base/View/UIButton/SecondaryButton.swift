@@ -20,14 +20,14 @@ class SecondaryButton: UIButton {
     
 //    override var isEnabled: Bool {
 //        didSet {
-//            self.backgroundColor = isEnabled ? .primaryBtnColor : .primaryBtnColor
+//            self.backgroundColor = isEnabled ? .PrimaryBtnColor : .PrimaryBtnColor
 //        }
 //    }
 //
 //    override var isHighlighted: Bool {
 //        didSet {
 //            super.isHighlighted = isHighlighted
-//            backgroundColor = isHighlighted ? .primaryBtnColor : .primaryBtnColor
+//            backgroundColor = isHighlighted ? .PrimaryBtnColor : .PrimaryBtnColor
 //        }
 //    }
     
