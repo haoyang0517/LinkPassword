@@ -20,6 +20,7 @@ extension DI.ViewPairs {
         Signup.register()
         Signin.register()
         Home.register()
+        AddPassword.register()
         Settings.register()
         DiscoverPassword.register()
         ChangePassword.register()

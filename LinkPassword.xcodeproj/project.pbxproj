@@ -43,6 +43,13 @@
 		2F443EDD2B8F352B00820752 /* SettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F443EDC2B8F352B00820752 /* SettingsEnum.swift */; };
 		2F443EE12B8F697500820752 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F443EDF2B8F697500820752 /* SettingsTableViewCell.swift */; };
 		2F443EE22B8F697500820752 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F443EE02B8F697500820752 /* SettingsTableViewCell.xib */; };
+		2F443EE52B8F81DA00820752 /* AddPasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F443EE42B8F81DA00820752 /* AddPasswordViewController.storyboard */; };
+		2F443EE92B8F81F600820752 /* DI+AddPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F443EE82B8F81F600820752 /* DI+AddPassword.swift */; };
+		2F443EEB2B8F81FF00820752 /* AddPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F443EEA2B8F81FF00820752 /* AddPasswordViewController.swift */; };
+		2F443EED2B8F820800820752 /* AddPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F443EEC2B8F820800820752 /* AddPasswordViewModel.swift */; };
+		2F443EEF2B8F821200820752 /* AddPasswordViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F443EEE2B8F821200820752 /* AddPasswordViewTypes.swift */; };
+		2F443EF12B8F82BE00820752 /* DropDownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F443EF02B8F82BE00820752 /* DropDownTextField.swift */; };
+		2F443EF32B8F851C00820752 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F443EF22B8F851C00820752 /* CustomTextField.swift */; };
 		2F74FAF72B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAF62B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift */; };
 		2F74FAFA2B8CCD8500FE8DF2 /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAF92B8CCD8500FE8DF2 /* Observable+Ext.swift */; };
 		2F74FAFC2B8CCDBF00FE8DF2 /* RxOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAFB2B8CCDBF00FE8DF2 /* RxOperator.swift */; };
@@ -187,6 +194,13 @@
 		2F443EDC2B8F352B00820752 /* SettingsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEnum.swift; sourceTree = "<group>"; };
 		2F443EDF2B8F697500820752 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		2F443EE02B8F697500820752 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		2F443EE42B8F81DA00820752 /* AddPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPasswordViewController.storyboard; sourceTree = "<group>"; };
+		2F443EE82B8F81F600820752 /* DI+AddPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DI+AddPassword.swift"; sourceTree = "<group>"; };
+		2F443EEA2B8F81FF00820752 /* AddPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewController.swift; sourceTree = "<group>"; };
+		2F443EEC2B8F820800820752 /* AddPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewModel.swift; sourceTree = "<group>"; };
+		2F443EEE2B8F821200820752 /* AddPasswordViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewTypes.swift; sourceTree = "<group>"; };
+		2F443EF02B8F82BE00820752 /* DropDownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTextField.swift; sourceTree = "<group>"; };
+		2F443EF22B8F851C00820752 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2F74FAF62B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxViewControllerCycle.swift"; sourceTree = "<group>"; };
 		2F74FAF92B8CCD8500FE8DF2 /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		2F74FAFB2B8CCDBF00FE8DF2 /* RxOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxOperator.swift; sourceTree = "<group>"; };
@@ -479,6 +493,34 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2F443EE32B8F81B100820752 /* AddPassword */ = {
+			isa = PBXGroup;
+			children = (
+				2F443EE42B8F81DA00820752 /* AddPasswordViewController.storyboard */,
+				2F443EE62B8F81DC00820752 /* Constant */,
+				2F443EE72B8F81E700820752 /* View */,
+			);
+			path = AddPassword;
+			sourceTree = "<group>";
+		};
+		2F443EE62B8F81DC00820752 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				2F443EE82B8F81F600820752 /* DI+AddPassword.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		2F443EE72B8F81E700820752 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F443EEA2B8F81FF00820752 /* AddPasswordViewController.swift */,
+				2F443EEC2B8F820800820752 /* AddPasswordViewModel.swift */,
+				2F443EEE2B8F821200820752 /* AddPasswordViewTypes.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2F74FAF42B8CCCC700FE8DF2 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
@@ -623,6 +665,7 @@
 				2F74FBAD2B8E1E9300FE8DF2 /* Signin */,
 				2F0CB5EC2B8ED2B4005C871A /* MainTabBar */,
 				2F0CB5F22B8EFB09005C871A /* Home */,
+				2F443EE32B8F81B100820752 /* AddPassword */,
 				2F0CB5FF2B8EFBCE005C871A /* Settings */,
 				2F0CB60C2B8EFDD2005C871A /* DiscoverPassword */,
 				2F0CB6192B8EFE99005C871A /* ChangePassword */,
@@ -852,6 +895,8 @@
 			isa = PBXGroup;
 			children = (
 				2F74FB9C2B8E1D8500FE8DF2 /* CustomIconTextField.swift */,
+				2F443EF02B8F82BE00820752 /* DropDownTextField.swift */,
+				2F443EF22B8F851C00820752 /* CustomTextField.swift */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -1112,6 +1157,7 @@
 				2F7D532B2B8C74EA00C73310 /* Main.storyboard in Resources */,
 				2F0CB5F02B8ED89B005C871A /* MainTabViewController.storyboard in Resources */,
 				2F0CB6322B8EFF57005C871A /* ChangePasswordViewController.storyboard in Resources */,
+				2F443EE52B8F81DA00820752 /* AddPasswordViewController.storyboard in Resources */,
 				2F74FBAC2B8E1E8A00FE8DF2 /* SignupViewController.storyboard in Resources */,
 				2F089A0D2B8E44E1000E9F56 /* Sora-Regular.ttf in Resources */,
 				2F0CB6102B8EFE1E005C871A /* DiscoverPasswordViewController.storyboard in Resources */,
@@ -1211,6 +1257,7 @@
 				2F74FB3A2B8CD70700FE8DF2 /* BaseViewModelType.swift in Sources */,
 				2F74FB312B8CD5FB00FE8DF2 /* ViewModelType.swift in Sources */,
 				2F0CB6122B8EFE2A005C871A /* DI+DiscoverPassword.swift in Sources */,
+				2F443EF12B8F82BE00820752 /* DropDownTextField.swift in Sources */,
 				2F74FB172B8CD54600FE8DF2 /* AppWindow.swift in Sources */,
 				2F74FBB22B8E1F3200FE8DF2 /* DI+Signin.swift in Sources */,
 				2F0CB6342B8F1588005C871A /* CategoryEnum.swift in Sources */,
@@ -1222,10 +1269,13 @@
 				2F74FB6E2B8DA2C200FE8DF2 /* SplashViewModel.swift in Sources */,
 				2F74FB7A2B8DB51100FE8DF2 /* Constant.swift in Sources */,
 				2F0CB63A2B8F1825005C871A /* CategoryFilterCollectionViewCell.swift in Sources */,
+				2F443EF32B8F851C00820752 /* CustomTextField.swift in Sources */,
+				2F443EEB2B8F81FF00820752 /* AddPasswordViewController.swift in Sources */,
 				2F74FB092B8CD48400FE8DF2 /* DismissResult.swift in Sources */,
 				2FB1B9122B8E2D4E00D5C0F6 /* BarItemViewType.swift in Sources */,
 				2F74FB9D2B8E1D8500FE8DF2 /* CustomIconTextField.swift in Sources */,
 				2F443EE12B8F697500820752 /* SettingsTableViewCell.swift in Sources */,
+				2F443EE92B8F81F600820752 /* DI+AddPassword.swift in Sources */,
 				2F74FB382B8CD6FB00FE8DF2 /* BaseViewController.swift in Sources */,
 				2F74FB2B2B8CD5D600FE8DF2 /* PresentationBinding.swift in Sources */,
 				2F74FB4C2B8CD8A600FE8DF2 /* DI+Model.swift in Sources */,
@@ -1238,6 +1288,7 @@
 				2F0CB5FE2B8EFBC3005C871A /* HomeViewTypes.swift in Sources */,
 				2F74FB3C2B8CD71300FE8DF2 /* BaseViewModel.swift in Sources */,
 				2F74FBA82B8E1E7000FE8DF2 /* SignupTypes.swift in Sources */,
+				2F443EED2B8F820800820752 /* AddPasswordViewModel.swift in Sources */,
 				2F74FAFC2B8CCDBF00FE8DF2 /* RxOperator.swift in Sources */,
 				2FB1B9142B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift in Sources */,
 				2F0CB6162B8EFE4C005C871A /* DiscoverPasswordViewModel.swift in Sources */,
@@ -1273,6 +1324,7 @@
 				2F74FB852B8DBFD800FE8DF2 /* SplashMenuViewController.swift in Sources */,
 				2F0CB5F82B8EFB8F005C871A /* DI+Home.swift in Sources */,
 				2F443EDD2B8F352B00820752 /* SettingsEnum.swift in Sources */,
+				2F443EEF2B8F821200820752 /* AddPasswordViewTypes.swift in Sources */,
 				2F0CB6052B8EFBF7005C871A /* SettingsViewTypes.swift in Sources */,
 				2F74FB192B8CD55100FE8DF2 /* DisposeOnWillRemoveFromParentType.swift in Sources */,
 				2F74FB552B8CD9A100FE8DF2 /* DI+Helper.swift in Sources */,

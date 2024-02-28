@@ -34,7 +34,6 @@ class SignupViewController: BaseViewController<SignupViewModel> {
     
     override func setupView() {
         super.setupView()
-        view.backgroundColor = .red
         
         titleLabel.text = "Create Account"
         titleLabel.font = LinkPassword.Fonts.soraSemiBold(size: 32)

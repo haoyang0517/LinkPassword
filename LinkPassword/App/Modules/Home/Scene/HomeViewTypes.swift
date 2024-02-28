@@ -11,7 +11,7 @@ import RxCocoa
 
 
 protocol HomeViewType: BaseViewType {
-    
+    func routeToAdd()
 }
 
 typealias HomeViewControllerType = UIViewController & HomeViewType

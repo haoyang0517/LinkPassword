@@ -28,7 +28,7 @@ class MainTabViewController: UITabBarController {
     func homeVC() -> UIViewController {
         let screen = DI.resolver.resolve(HomeViewControllerType.self)!
         screen.hidesBottomBarWhenPushed = false
-        let nav = UINavigationController(rootViewController: screen)
+        let nav = BaseNavigationController(rootViewController: screen)
         nav.tabBarItem = UITabBarItem(title: "Home", image: LinkPassword.Images.tabHomeIcon, selectedImage: LinkPassword.Images.tabHomeSelectedIcon)
         return nav
     }
@@ -36,7 +36,7 @@ class MainTabViewController: UITabBarController {
     func settingVC() -> UIViewController {
         let screen = DI.resolver.resolve(SettingsViewControllerType.self)!
         screen.hidesBottomBarWhenPushed = false
-        let nav = UINavigationController(rootViewController: screen)
+        let nav = BaseNavigationController(rootViewController: screen)
         nav.tabBarItem = UITabBarItem(title: "Settings", image: LinkPassword.Images.tabSettingsIcon, selectedImage: LinkPassword.Images.tabSettingsSelectedIcon)
         return nav
     }

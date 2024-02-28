@@ -23,6 +23,8 @@ final class HomeViewModel: BaseViewModel {
         return selectedCategorySubject.asObservable()
     }
 
+    let addDidTap = PublishSubject<Void>()
+
 
     //MARK: - Outputs
     
@@ -47,6 +49,11 @@ final class HomeViewModel: BaseViewModel {
     override func transform() {
         super.transform()
         
+        let addDidTap = addDidTap
+            .subscribe(onNext: { [weak self] _ in
+                self?.view?.routeToAdd()
+            })
+
                 
         disposeBag.insert(
         )

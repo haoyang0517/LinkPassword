@@ -72,12 +72,19 @@ class HomeViewController: BaseViewController<HomeViewModel> {
             .subscribe(onNext: { [weak self] categorySelected in
                 self?.updateCellAppearance(for: categorySelected)
             })
+        
+        let addBtnDidTap = addButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.addDidTap)
+
+
 
         disposeBag.insert(
             categoryDelegate,
             categoryList,
             categorySelected,
-            selectedCategoryUpdated
+            selectedCategoryUpdated,
+            addBtnDidTap
         )
 
     }
@@ -105,7 +112,10 @@ extension HomeViewController {
 
 //MARK: - <HomeViewType>
 extension HomeViewController: HomeViewType {
-    
+    func routeToAdd() {
+        let screen = DI.resolver.resolve(AddPasswordViewControllerType.self)!
+        self.navigationController?.pushViewController(screen)
+    }
 }
 
 //MARK: UICollectionView Delegate
