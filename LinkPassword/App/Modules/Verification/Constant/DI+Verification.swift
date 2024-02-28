@@ -10,7 +10,7 @@ import UIKit
 extension DI.ViewPairs {
     struct Verification : DIRegistor {
         static func register() {
-            let storyboard = UIStoryboard(name: “VerificationViewController", bundle: nil)
+            let storyboard = UIStoryboard(name: "VerificationViewController", bundle: nil)
 
             // Verification
             DI.container.register(VerificationViewControllerType.self) { r -> VerificationViewControllerType in

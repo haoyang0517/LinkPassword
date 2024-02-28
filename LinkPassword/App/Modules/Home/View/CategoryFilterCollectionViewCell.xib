@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryFilterCollectionViewCell" customModule="LinkPassword" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="48"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="364" height="48"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cec-l5-65U">
+                        <rect key="frame" x="0.0" y="0.0" width="364" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzA-Oq-8mh">
+                                <rect key="frame" x="0.0" y="0.0" width="364" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dzA-Oq-8mh" secondAttribute="trailing" id="Bn6-Lc-dO2"/>
+                            <constraint firstAttribute="bottom" secondItem="dzA-Oq-8mh" secondAttribute="bottom" id="EKd-id-38R"/>
+                            <constraint firstItem="dzA-Oq-8mh" firstAttribute="leading" secondItem="cec-l5-65U" secondAttribute="leading" id="sE9-Vp-4uD"/>
+                            <constraint firstItem="dzA-Oq-8mh" firstAttribute="top" secondItem="cec-l5-65U" secondAttribute="top" id="zNV-e6-qkc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="cec-l5-65U" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CZU-gP-8WF"/>
+                <constraint firstAttribute="bottom" secondItem="cec-l5-65U" secondAttribute="bottom" id="TC1-fg-ZXA"/>
+                <constraint firstAttribute="trailing" secondItem="cec-l5-65U" secondAttribute="trailing" id="bW4-gs-vkQ"/>
+                <constraint firstItem="cec-l5-65U" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vJa-Io-WAl"/>
+            </constraints>
+            <size key="customSize" width="364" height="48"/>
+            <connections>
+                <outlet property="titleContainer" destination="cec-l5-65U" id="ah2-QK-AES"/>
+                <outlet property="titleLabel" destination="dzA-Oq-8mh" id="d6s-fa-IkS"/>
+            </connections>
+            <point key="canvasLocation" x="-213.74045801526717" y="19.014084507042256"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

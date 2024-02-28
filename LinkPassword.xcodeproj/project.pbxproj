@@ -22,7 +22,7 @@
 		2F0CB6052B8EFBF7005C871A /* SettingsViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB6042B8EFBF7005C871A /* SettingsViewTypes.swift */; };
 		2F0CB6072B8EFC4E005C871A /* DI+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB6062B8EFC4E005C871A /* DI+Settings.swift */; };
 		2F0CB6092B8EFC59005C871A /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0CB6082B8EFC59005C871A /* SettingsViewController.storyboard */; };
-		2F0CB6102B8EFE1E005C871A /* DiscoverPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0CB60F2B8EFE1E005C871A /* DiscoverPassword.storyboard */; };
+		2F0CB6102B8EFE1E005C871A /* DiscoverPasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0CB60F2B8EFE1E005C871A /* DiscoverPasswordViewController.storyboard */; };
 		2F0CB6122B8EFE2A005C871A /* DI+DiscoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB6112B8EFE2A005C871A /* DI+DiscoverPassword.swift */; };
 		2F0CB6142B8EFE3E005C871A /* DiscoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB6132B8EFE3E005C871A /* DiscoverPasswordViewController.swift */; };
 		2F0CB6162B8EFE4C005C871A /* DiscoverPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB6152B8EFE4C005C871A /* DiscoverPasswordViewModel.swift */; };
@@ -37,6 +37,9 @@
 		2F0CB62E2B8EFF3B005C871A /* VerificationViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB62D2B8EFF3B005C871A /* VerificationViewTypes.swift */; };
 		2F0CB6302B8EFF49005C871A /* VerificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0CB62F2B8EFF49005C871A /* VerificationViewController.storyboard */; };
 		2F0CB6322B8EFF57005C871A /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0CB6312B8EFF57005C871A /* ChangePasswordViewController.storyboard */; };
+		2F0CB6342B8F1588005C871A /* CategoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB6332B8F1588005C871A /* CategoryEnum.swift */; };
+		2F0CB63A2B8F1825005C871A /* CategoryFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB6382B8F1825005C871A /* CategoryFilterCollectionViewCell.swift */; };
+		2F0CB63B2B8F1825005C871A /* CategoryFilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F0CB6392B8F1825005C871A /* CategoryFilterCollectionViewCell.xib */; };
 		2F74FAF72B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAF62B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift */; };
 		2F74FAFA2B8CCD8500FE8DF2 /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAF92B8CCD8500FE8DF2 /* Observable+Ext.swift */; };
 		2F74FAFC2B8CCDBF00FE8DF2 /* RxOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAFB2B8CCDBF00FE8DF2 /* RxOperator.swift */; };
@@ -160,7 +163,7 @@
 		2F0CB6042B8EFBF7005C871A /* SettingsViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewTypes.swift; sourceTree = "<group>"; };
 		2F0CB6062B8EFC4E005C871A /* DI+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DI+Settings.swift"; sourceTree = "<group>"; };
 		2F0CB6082B8EFC59005C871A /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
-		2F0CB60F2B8EFE1E005C871A /* DiscoverPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiscoverPassword.storyboard; sourceTree = "<group>"; };
+		2F0CB60F2B8EFE1E005C871A /* DiscoverPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiscoverPasswordViewController.storyboard; sourceTree = "<group>"; };
 		2F0CB6112B8EFE2A005C871A /* DI+DiscoverPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DI+DiscoverPassword.swift"; sourceTree = "<group>"; };
 		2F0CB6132B8EFE3E005C871A /* DiscoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPasswordViewController.swift; sourceTree = "<group>"; };
 		2F0CB6152B8EFE4C005C871A /* DiscoverPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPasswordViewModel.swift; sourceTree = "<group>"; };
@@ -175,6 +178,9 @@
 		2F0CB62D2B8EFF3B005C871A /* VerificationViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewTypes.swift; sourceTree = "<group>"; };
 		2F0CB62F2B8EFF49005C871A /* VerificationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerificationViewController.storyboard; sourceTree = "<group>"; };
 		2F0CB6312B8EFF57005C871A /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
+		2F0CB6332B8F1588005C871A /* CategoryEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEnum.swift; sourceTree = "<group>"; };
+		2F0CB6382B8F1825005C871A /* CategoryFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F0CB6392B8F1825005C871A /* CategoryFilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryFilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		2F74FAF62B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxViewControllerCycle.swift"; sourceTree = "<group>"; };
 		2F74FAF92B8CCD8500FE8DF2 /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		2F74FAFB2B8CCDBF00FE8DF2 /* RxOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxOperator.swift; sourceTree = "<group>"; };
@@ -311,6 +317,7 @@
 				2F0CB5F32B8EFB20005C871A /* HomeViewController.storyboard */,
 				2F0CB5F52B8EFB23005C871A /* Constant */,
 				2F0CB5F62B8EFB76005C871A /* Scene */,
+				2F0CB6352B8F1629005C871A /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -319,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				2F0CB5F72B8EFB8F005C871A /* DI+Home.swift */,
+				2F0CB6332B8F1588005C871A /* CategoryEnum.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -364,7 +372,7 @@
 		2F0CB60C2B8EFDD2005C871A /* DiscoverPassword */ = {
 			isa = PBXGroup;
 			children = (
-				2F0CB60F2B8EFE1E005C871A /* DiscoverPassword.storyboard */,
+				2F0CB60F2B8EFE1E005C871A /* DiscoverPasswordViewController.storyboard */,
 				2F0CB60E2B8EFE08005C871A /* Constant */,
 				2F0CB60D2B8EFE04005C871A /* Scene */,
 			);
@@ -443,6 +451,15 @@
 				2F0CB62D2B8EFF3B005C871A /* VerificationViewTypes.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		2F0CB6352B8F1629005C871A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F0CB6382B8F1825005C871A /* CategoryFilterCollectionViewCell.swift */,
+				2F0CB6392B8F1825005C871A /* CategoryFilterCollectionViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2F74FAF42B8CCCC700FE8DF2 /* Architecture */ = {
@@ -1068,6 +1085,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0CB63B2B8F1825005C871A /* CategoryFilterCollectionViewCell.xib in Resources */,
 				2F0CB6092B8EFC59005C871A /* SettingsViewController.storyboard in Resources */,
 				2F0CB5F42B8EFB20005C871A /* HomeViewController.storyboard in Resources */,
 				2F7D53332B8C74EB00C73310 /* LaunchScreen.storyboard in Resources */,
@@ -1078,7 +1096,7 @@
 				2F0CB6322B8EFF57005C871A /* ChangePasswordViewController.storyboard in Resources */,
 				2F74FBAC2B8E1E8A00FE8DF2 /* SignupViewController.storyboard in Resources */,
 				2F089A0D2B8E44E1000E9F56 /* Sora-Regular.ttf in Resources */,
-				2F0CB6102B8EFE1E005C871A /* DiscoverPassword.storyboard in Resources */,
+				2F0CB6102B8EFE1E005C871A /* DiscoverPasswordViewController.storyboard in Resources */,
 				2F74FB7F2B8DBFA900FE8DF2 /* SplashMenuViewController.storyboard in Resources */,
 				2F74FB732B8DA82E00FE8DF2 /* splash_lottie.json in Resources */,
 				2F74FBAF2B8E1EB800FE8DF2 /* SigninViewController.storyboard in Resources */,
@@ -1177,6 +1195,7 @@
 				2F0CB6122B8EFE2A005C871A /* DI+DiscoverPassword.swift in Sources */,
 				2F74FB172B8CD54600FE8DF2 /* AppWindow.swift in Sources */,
 				2F74FBB22B8E1F3200FE8DF2 /* DI+Signin.swift in Sources */,
+				2F0CB6342B8F1588005C871A /* CategoryEnum.swift in Sources */,
 				2F74FB872B8DBFE000FE8DF2 /* SplashMenuViewModel.swift in Sources */,
 				2F74FB0F2B8CD4B400FE8DF2 /* DismissWithResultProtocol+Rx.swift in Sources */,
 				2F74FB112B8CD4BE00FE8DF2 /* UIViewController+DismissWithResultHelper.swift in Sources */,
@@ -1184,6 +1203,7 @@
 				2F0CB6012B8EFBE6005C871A /* SettingsViewController.swift in Sources */,
 				2F74FB6E2B8DA2C200FE8DF2 /* SplashViewModel.swift in Sources */,
 				2F74FB7A2B8DB51100FE8DF2 /* Constant.swift in Sources */,
+				2F0CB63A2B8F1825005C871A /* CategoryFilterCollectionViewCell.swift in Sources */,
 				2F74FB092B8CD48400FE8DF2 /* DismissResult.swift in Sources */,
 				2FB1B9122B8E2D4E00D5C0F6 /* BarItemViewType.swift in Sources */,
 				2F74FB9D2B8E1D8500FE8DF2 /* CustomIconTextField.swift in Sources */,

@@ -13,7 +13,17 @@ import SwifterSwift
 final class HomeViewModel: BaseViewModel {
     
     //MARK: - Inputs
-    
+    private let categorySubject = BehaviorSubject<[PasswordCategory]>(value: [])
+    let selectedCategorySubject = PublishSubject<PasswordCategory>()
+
+    var categories: Observable<[PasswordCategory]> {
+        return categorySubject.asObservable()
+    }
+    var selectedCategory: Observable<PasswordCategory> {
+        return selectedCategorySubject.asObservable()
+    }
+
+
     //MARK: - Outputs
     
     //MARK: - Dependencies
@@ -24,6 +34,9 @@ final class HomeViewModel: BaseViewModel {
     //MARK: - Initializer
     override init() {
         super.init()
+        
+        categorySubject.onNext(PasswordCategory.allCases)
+        selectedCategorySubject.onNext(.all)
     }
     
     override func dispose() {
@@ -41,4 +54,17 @@ final class HomeViewModel: BaseViewModel {
 }
 
 extension HomeViewModel {
+    func selectCategory(at indexPath: IndexPath) {
+        
+        categorySubject
+            .take(1) // Take the latest emitted value from the observable
+            .subscribe(onNext: { [weak self] items in
+                guard indexPath.row < items.count else { return }
+                let selectedItem = items[indexPath.row]
+                self?.selectedCategorySubject.onNext(selectedItem)
+            })
+            .disposed(by: disposeBag)
+
+    }
+
 }

@@ -10,7 +10,7 @@ import UIKit
 extension DI.ViewPairs {
     struct Settings : DIRegistor {
         static func register() {
-            let storyboard = UIStoryboard(name: “SettingsViewController", bundle: nil)
+            let storyboard = UIStoryboard(name: "SettingsViewController", bundle: nil)
 
             // Settings
             DI.container.register(SettingsViewControllerType.self) { r -> SettingsViewControllerType in

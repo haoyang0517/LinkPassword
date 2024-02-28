@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sora-Regular.ttf">
+            <string>Sora-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -16,16 +21,95 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWT-Ss-d7J">
+                                <rect key="frame" x="18" y="95" width="174.33333333333334" height="80.666666666666686"/>
+                                <string key="text">Welcome 
+Username!</string>
+                                <fontDescription key="fontDescription" name="Sora-Regular" family="Sora" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkW-rB-aY7">
+                                <rect key="frame" x="323" y="109.33333333333331" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="7Qu-He-cL2"/>
+                                    <constraint firstAttribute="height" constant="52" id="Ygo-MS-RKn"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="home_search"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hir-bl-66k">
+                                <rect key="frame" x="18" y="203.66666666666666" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Odk-I3-McP">
+                                <rect key="frame" x="18" y="236.66666666666663" width="357" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hao-Q1-JM6"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="e5s-GF-uI5">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bUS-Uj-O1r">
+                                <rect key="frame" x="18" y="288.66666666666669" width="357" height="529.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNm-Ov-dPF">
+                                <rect key="frame" x="325" y="738" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="NbB-fp-xDF"/>
+                                    <constraint firstAttribute="height" constant="50" id="RJz-b8-mk8"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="home_add"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Odk-I3-McP" firstAttribute="top" secondItem="hir-bl-66k" secondAttribute="bottom" constant="12" id="1h0-Kl-Eol"/>
+                            <constraint firstItem="lWT-Ss-d7J" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="36" id="2Ib-pf-Hb7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bUS-Uj-O1r" secondAttribute="trailing" constant="18" id="6pt-Z0-Grz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Odk-I3-McP" secondAttribute="trailing" constant="18" id="9N8-S1-VsO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="bUS-Uj-O1r" secondAttribute="bottom" id="OLB-Ax-Zja"/>
+                            <constraint firstItem="QNm-Ov-dPF" firstAttribute="bottom" secondItem="bUS-Uj-O1r" secondAttribute="bottom" constant="-30" id="PY7-d7-dVg"/>
+                            <constraint firstItem="bUS-Uj-O1r" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="Pjw-MF-fMn"/>
+                            <constraint firstItem="Odk-I3-McP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="azh-g6-xaZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AkW-rB-aY7" secondAttribute="trailing" constant="18" id="cfp-Ha-2y6"/>
+                            <constraint firstItem="AkW-rB-aY7" firstAttribute="centerY" secondItem="lWT-Ss-d7J" secondAttribute="centerY" id="hLd-qU-HDQ"/>
+                            <constraint firstItem="QNm-Ov-dPF" firstAttribute="trailing" secondItem="bUS-Uj-O1r" secondAttribute="trailing" id="iNr-IY-6Qt"/>
+                            <constraint firstItem="hir-bl-66k" firstAttribute="top" secondItem="lWT-Ss-d7J" secondAttribute="bottom" constant="28" id="mTL-1R-YDw"/>
+                            <constraint firstItem="hir-bl-66k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="rrl-qI-vBD"/>
+                            <constraint firstItem="bUS-Uj-O1r" firstAttribute="top" secondItem="Odk-I3-McP" secondAttribute="bottom" constant="12" id="v5L-dq-W5D"/>
+                            <constraint firstItem="lWT-Ss-d7J" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="18" id="w17-Nq-TBO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="QNm-Ov-dPF" id="EjP-dx-eF8"/>
+                        <outlet property="categoryCollectionView" destination="Odk-I3-McP" id="hO7-Kk-qlL"/>
+                        <outlet property="categoryTitleLabel" destination="hir-bl-66k" id="l5l-8f-a1p"/>
+                        <outlet property="searchButton" destination="AkW-rB-aY7" id="LR6-pP-LGA"/>
+                        <outlet property="tableView" destination="bUS-Uj-O1r" id="P5P-CX-lm7"/>
+                        <outlet property="titleLabel" destination="lWT-Ss-d7J" id="h6D-ol-6cX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29" y="-2"/>
+            <point key="canvasLocation" x="28.244274809160306" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="home_add" width="50" height="50"/>
+        <image name="home_search" width="52" height="52"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

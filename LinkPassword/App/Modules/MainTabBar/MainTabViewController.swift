@@ -26,7 +26,7 @@ class MainTabViewController: UITabBarController {
     }
 
     func homeVC() -> UIViewController {
-        let screen = DI.resolver.resolve(SigninViewControllerType.self)!
+        let screen = DI.resolver.resolve(HomeViewControllerType.self)!
         screen.hidesBottomBarWhenPushed = false
         let nav = UINavigationController(rootViewController: screen)
         nav.tabBarItem = UITabBarItem(title: "Home", image: LinkPassword.Images.tabHomeIcon, selectedImage: LinkPassword.Images.tabHomeSelectedIcon)

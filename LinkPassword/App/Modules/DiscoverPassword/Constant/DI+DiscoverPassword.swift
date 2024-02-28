@@ -10,7 +10,7 @@ import UIKit
 extension DI.ViewPairs {
     struct DiscoverPassword : DIRegistor {
         static func register() {
-            let storyboard = UIStoryboard(name: “DiscoverPasswordViewController", bundle: nil)
+            let storyboard = UIStoryboard(name: "DiscoverPasswordViewController", bundle: nil)
 
             // DiscoverPassword
             DI.container.register(DiscoverPasswordViewControllerType.self) { r -> DiscoverPasswordViewControllerType in

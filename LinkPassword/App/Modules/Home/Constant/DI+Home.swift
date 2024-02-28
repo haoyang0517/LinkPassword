@@ -10,7 +10,7 @@ import UIKit
 extension DI.ViewPairs {
     struct Home : DIRegistor {
         static func register() {
-            let storyboard = UIStoryboard(name: “HomeViewController", bundle: nil)
+            let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
 
             // Home
             DI.container.register(HomeViewControllerType.self) { r -> HomeViewControllerType in
