@@ -13,7 +13,8 @@ import SwifterSwift
 final class ChangePasswordViewModel: BaseViewModel {
     
     //MARK: - Inputs
-    
+    let changePwDidTap = PublishSubject<Void>()
+
     //MARK: - Outputs
     
     //MARK: - Dependencies
@@ -34,8 +35,13 @@ final class ChangePasswordViewModel: BaseViewModel {
     override func transform() {
         super.transform()
         
-                
+        let changePwDidTap = changePwDidTap
+            .subscribe(onNext: { [weak self] _ in
+                self?.view?.routeToVerification()
+            })
+
         disposeBag.insert(
+            changePwDidTap
         )
     }
 }

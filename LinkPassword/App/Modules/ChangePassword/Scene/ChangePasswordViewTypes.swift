@@ -11,7 +11,7 @@ import RxCocoa
 
 
 protocol ChangePasswordViewType: BaseViewType {
-    
+    func routeToVerification()
 }
 
 typealias ChangePasswordViewControllerType = UIViewController & ChangePasswordViewType

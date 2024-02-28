@@ -43,7 +43,6 @@ class BaseViewController<VM> : UIViewController, BaseViewType, ViewType, BaseNav
         transform()
         subscribe()
         subscribeAnalytics()
-        view.backgroundColor = LinkPassword.Colors.BgColor
         if #available(iOS 15.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithTransparentBackground()
@@ -76,8 +75,9 @@ class BaseViewController<VM> : UIViewController, BaseViewType, ViewType, BaseNav
     }
     //MARK: setupView
     func setupView() {
-        
+        view.backgroundColor = LinkPassword.Colors.BgColor
     }
+    
     //MARK: transform
     func setupTransformInput() {
     }
@@ -85,10 +85,12 @@ class BaseViewController<VM> : UIViewController, BaseViewType, ViewType, BaseNav
     func transform() {
         viewModel.transform()
     }
+    
     //MARK: subscribe
     func subscribe() {
         
     }
+    
     func subscribeAnalytics() {
         viewModel.subscribeAnalytics()
     }

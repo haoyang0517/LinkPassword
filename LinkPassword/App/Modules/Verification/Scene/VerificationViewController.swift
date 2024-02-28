@@ -8,9 +8,24 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Lottie
 
 class VerificationViewController: BaseViewController<VerificationViewModel> {
     //MARK: - IBOutlets
+    @IBOutlet weak var inputContainer: UIStackView!
+    @IBOutlet weak var emailContainer: UIStackView!
+    @IBOutlet weak var hintTitleLabel: UILabel!
+    @IBOutlet weak var hintMessageLabel: UILabel!
+    @IBOutlet weak var emailTitleLabel: UILabel!
+    @IBOutlet weak var emailTextField: CustomTextField!
+    @IBOutlet weak var otpTextFieldView: OTPTextFieldView!
+    @IBOutlet weak var nextButton: PrimaryButton!
+    @IBOutlet weak var statusContainer: UIStackView!
+    @IBOutlet weak var animationView: AnimationView!
+    @IBOutlet weak var statusTitleLabel: UILabel!
+    @IBOutlet weak var statusMessageLabel: UILabel!
+    @IBOutlet weak var outsideCloseButton: UIButton!
+
     //MARK: - Constants
     //MARK: - Vars
     
@@ -22,7 +37,7 @@ class VerificationViewController: BaseViewController<VerificationViewModel> {
     
     override func setupView() {
         super.setupView()
-        view.backgroundColor = .red
+        view.backgroundColor = .clear
     }
     
     override func setupTransformInput() {

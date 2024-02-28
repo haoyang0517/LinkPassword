@@ -58,13 +58,24 @@ class ChangePasswordViewController: BaseViewController<ChangePasswordViewModel> 
     
     override func subscribe() {
         super.subscribe()
+        
+        changePwButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.changePwDidTap)
+            .disposed(by: disposeBag)
+
     }
 }
 
 
 //MARK: - Helper
 extension ChangePasswordViewController {
-    
+    func routeToVerification(){
+        let screen = DI.container.resolve(VerificationViewControllerType.self)!
+        screen.modalPresentationStyle = .overFullScreen
+        screen.modalTransitionStyle = .crossDissolve
+        self.present(screen, animated: true, completion: nil)
+    }
 }
 
 //MARK: - <ChangePasswordViewType>

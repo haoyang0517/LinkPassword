@@ -136,6 +136,7 @@
 		2FB1B9162B8E2D6100D5C0F6 /* UIViewController+RxBarItemsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B9152B8E2D6100D5C0F6 /* UIViewController+RxBarItemsViewType.swift */; };
 		2FB1B91B2B8E2E3C00D5C0F6 /* BackBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B91A2B8E2E3C00D5C0F6 /* BackBarItem.swift */; };
 		2FB1B91D2B8E2EE500D5C0F6 /* CloseBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B91C2B8E2EE500D5C0F6 /* CloseBarItem.swift */; };
+		2FEF77942B8F98E3006D00BD /* OTPTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF77932B8F98E3006D00BD /* OTPTextFieldView.swift */; };
 		B4605CB4DFE60B60C017B050 /* Pods_LinkPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC5C471481F999D9410DF93 /* Pods_LinkPassword.framework */; };
 /* End PBXBuildFile section */
 
@@ -291,6 +292,7 @@
 		2FB1B9152B8E2D6100D5C0F6 /* UIViewController+RxBarItemsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxBarItemsViewType.swift"; sourceTree = "<group>"; };
 		2FB1B91A2B8E2E3C00D5C0F6 /* BackBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBarItem.swift; sourceTree = "<group>"; };
 		2FB1B91C2B8E2EE500D5C0F6 /* CloseBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseBarItem.swift; sourceTree = "<group>"; };
+		2FEF77932B8F98E3006D00BD /* OTPTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextFieldView.swift; sourceTree = "<group>"; };
 		9EC5C471481F999D9410DF93 /* Pods_LinkPassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkPassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3C16C69E735EF7B72071B9 /* Pods-LinkPassword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkPassword.debug.xcconfig"; path = "Target Support Files/Pods-LinkPassword/Pods-LinkPassword.debug.xcconfig"; sourceTree = "<group>"; };
 		F82EECC2BC7354E06E2FAA49 /* Pods-LinkPassword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkPassword.release.xcconfig"; path = "Target Support Files/Pods-LinkPassword/Pods-LinkPassword.release.xcconfig"; sourceTree = "<group>"; };
@@ -897,6 +899,7 @@
 				2F74FB9C2B8E1D8500FE8DF2 /* CustomIconTextField.swift */,
 				2F443EF02B8F82BE00820752 /* DropDownTextField.swift */,
 				2F443EF22B8F851C00820752 /* CustomTextField.swift */,
+				2FEF77932B8F98E3006D00BD /* OTPTextFieldView.swift */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -1285,6 +1288,7 @@
 				2F74FB2F2B8CD5EF00FE8DF2 /* ViewType.swift in Sources */,
 				2F74FB362B8CD6F200FE8DF2 /* BaseViewType.swift in Sources */,
 				2F0CB61E2B8EFED3005C871A /* ChangePasswordViewController.swift in Sources */,
+				2FEF77942B8F98E3006D00BD /* OTPTextFieldView.swift in Sources */,
 				2F0CB5FE2B8EFBC3005C871A /* HomeViewTypes.swift in Sources */,
 				2F74FB3C2B8CD71300FE8DF2 /* BaseViewModel.swift in Sources */,
 				2F74FBA82B8E1E7000FE8DF2 /* SignupTypes.swift in Sources */,
