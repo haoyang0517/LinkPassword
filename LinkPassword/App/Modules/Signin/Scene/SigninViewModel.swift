@@ -15,6 +15,8 @@ final class SigninViewModel: BaseViewModel {
     //MARK: - Inputs
     let signinDidTap = PublishSubject<Void>()
     let signupDidTap = PublishSubject<Void>()
+    let signinWithAppleDidTap = PublishSubject<Void>()
+    let signinWithGoogleDidTap = PublishSubject<Void>()
 
     //MARK: - Outputs
     
@@ -46,9 +48,21 @@ final class SigninViewModel: BaseViewModel {
                 self?.view?.routeToSignup()
             })
 
+        let signinWithAppleDidTap = signinWithAppleDidTap
+            .subscribe(onNext: { [weak self] _ in
+                self?.view?.signinWithApple()
+            })
+
+        let signinWithGoogleDidTap = signinWithGoogleDidTap
+            .subscribe(onNext: { [weak self] _ in
+                self?.view?.signinWithApple()
+            })
+
         disposeBag.insert(
             signinDidTap,
-            signupDidTap
+            signupDidTap,
+            signinWithAppleDidTap,
+            signinWithGoogleDidTap
         )
     }
 }

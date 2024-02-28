@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SwifterSwift
+import AuthenticationServices
 
 class SigninViewController: BaseViewController<SigninViewModel> {
     //MARK: - IBOutlets
@@ -52,6 +53,11 @@ class SigninViewController: BaseViewController<SigninViewModel> {
         continueWithLabel.font = LinkPassword.Fonts.soraRegular(size: 11)
 
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        performExistingAccountSetupFlows()
+    }
     
     override func setupTransformInput() {
         super.setupTransformInput()
@@ -74,17 +80,96 @@ class SigninViewController: BaseViewController<SigninViewModel> {
             .bind(to: viewModel.signupDidTap)
             .disposed(by: disposeBag)
 
+        appleButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.signupDidTap)
+            .disposed(by: disposeBag)
+
     }
 }
 
 
 //MARK: - Helper
-extension SigninViewController {
-    
+extension SigninViewController: ASAuthorizationControllerDelegate {
+
+    // - Tag: perform_appleid_password_request
+    /// Prompts the user if an existing iCloud Keychain credential or Apple ID credential is found.
+    func performExistingAccountSetupFlows() {
+        // Prepare requests for both Apple ID and password providers.
+        let requests = [ASAuthorizationAppleIDProvider().createRequest(),
+                        ASAuthorizationPasswordProvider().createRequest()]
+        
+        // Create an authorization controller with the given requests.
+        let authorizationController = ASAuthorizationController(authorizationRequests: requests)
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+
+    // Function to perform Sign in with Apple
+    func performAppleSignIn() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            // Handle user authentication with the obtained credential
+            let userIdentifier = appleIDCredential.user
+            let fullName = appleIDCredential.fullName
+            let email = appleIDCredential.email
+
+            // Perform user registration or sign up logic
+            signUpUser(userIdentifier: userIdentifier, fullName: fullName, email: email)
+        }
+    }
+
+    func signUpUser(userIdentifier: String, fullName: PersonNameComponents?, email: String?) {
+        print(userIdentifier, fullName, email)
+        // Implement your user signup logic here
+        // You may want to send the userIdentifier, fullName, and email to your backend for registration
+
+        // For example, you can create a user object and store it locally or send it to your server
+        //        let newUser = User(identifier: userIdentifier, fullName: fullName, email: email)
+
+        // Now you can use the newUser object as needed in your app
+        // ...
+
+        // Optionally, perform any additional setup or UI updates for the signed-up user
+        // ...
+
+        // Finally, navigate to the main content of your app or perform any other relevant actions
+        // ...
+    }
+
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("Apple Sign In failed with error: \(error.localizedDescription)")
+    }
+
+}
+
+extension SigninViewController: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
 }
 
 //MARK: - <SigninViewType>
 extension SigninViewController: SigninViewType {
+    func signinWithApple() {
+        performAppleSignIn()
+    }
+    
+    func signinWithGoogle() {
+        
+    }
+    
     func routeToHome() {
         let screen = UIStoryboard(name: "MainTabViewController", bundle: nil).instantiateViewController(withIdentifier: "MainTabViewController")
         SwifterSwift.sharedApplication.keyWindow?.rootViewController = screen

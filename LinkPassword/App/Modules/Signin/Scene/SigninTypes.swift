@@ -13,6 +13,8 @@ import RxCocoa
 protocol SigninViewType: BaseViewType {
     func routeToHome()
     func routeToSignup()
+    func signinWithApple()
+    func signinWithGoogle()
 }
 
 typealias SigninViewControllerType = UIViewController & SigninViewType
