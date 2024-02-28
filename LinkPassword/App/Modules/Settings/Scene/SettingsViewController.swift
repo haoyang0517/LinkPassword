@@ -105,7 +105,8 @@ extension SettingsViewController {
     }
     
     func routeToChangePassword(){
-        print("change password")
+        let screen = DI.resolver.resolve(ChangePasswordViewControllerType.self)!
+        self.navigationController?.pushViewController(screen)
     }
     
     func logoutAction(){
