@@ -108,6 +108,7 @@ extension HomeViewController: HomeViewType {
     
 }
 
+//MARK: UICollectionView Delegate
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth = (collectionView.width - 20 ) / 4

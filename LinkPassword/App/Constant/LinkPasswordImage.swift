@@ -16,5 +16,8 @@ extension LinkPassword.Images {
     static let tabHomeSelectedIcon: UIImage = UIImage(named: "tab_icon_home_selected")!
     static let tabSettingsIcon: UIImage = UIImage(named: "tab_icon_settings")!
     static let tabSettingsSelectedIcon: UIImage = UIImage(named: "tab_icon_settings_selected")!
+    static let settings_navi: UIImage = UIImage(named: "setting_navigation")!
+    static let settings_logout: UIImage = UIImage(named: "setting_logout")!
+
 
 }

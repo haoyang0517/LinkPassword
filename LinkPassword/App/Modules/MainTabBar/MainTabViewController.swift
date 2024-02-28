@@ -34,7 +34,7 @@ class MainTabViewController: UITabBarController {
     }
 
     func settingVC() -> UIViewController {
-        let screen = DI.resolver.resolve(SigninViewControllerType.self)!
+        let screen = DI.resolver.resolve(SettingsViewControllerType.self)!
         screen.hidesBottomBarWhenPushed = false
         let nav = UINavigationController(rootViewController: screen)
         nav.tabBarItem = UITabBarItem(title: "Settings", image: LinkPassword.Images.tabSettingsIcon, selectedImage: LinkPassword.Images.tabSettingsSelectedIcon)
