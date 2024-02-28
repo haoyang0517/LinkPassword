@@ -240,7 +240,8 @@
                         <outlet property="formContainerView" destination="jNZ-Gk-DyZ" id="DJD-aA-mAh"/>
                         <outlet property="googleButton" destination="THM-JJ-27N" id="M1t-GO-1bn"/>
                         <outlet property="passwordTextField" destination="Qih-du-Ctc" id="huC-HW-6w2"/>
-                        <outlet property="signupButton" destination="G0F-B8-E3x" id="jtV-Ck-vou"/>
+                        <outlet property="signinTextButton" destination="cKV-2y-sV8" id="rfi-v1-r4z"/>
+                        <outlet property="signupButton" destination="G0F-B8-E3x" id="oV1-tJ-NRw"/>
                         <outlet property="subTitleLabel" destination="Nww-hU-R95" id="1Mr-oh-hyZ"/>
                         <outlet property="titleLabel" destination="08C-NB-ZCX" id="PGk-G7-8p5"/>
                         <outlet property="usernameTextField" destination="D84-WH-9hL" id="gdB-ws-1MY"/>

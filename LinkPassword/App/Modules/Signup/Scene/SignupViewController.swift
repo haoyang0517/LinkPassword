@@ -22,6 +22,7 @@ class SignupViewController: BaseViewController<SignupViewModel> {
     @IBOutlet weak var continueWithLabel: UILabel!
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var appleButton: UIButton!
+    @IBOutlet weak var signinTextButton: UIButton!
     //MARK: - Constants
     //MARK: - Vars
     
@@ -67,6 +68,17 @@ class SignupViewController: BaseViewController<SignupViewModel> {
     
     override func subscribe() {
         super.subscribe()
+        
+        signupButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.signupDidTap)
+            .disposed(by: disposeBag)
+        
+        signinTextButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.signinDidTap)
+            .disposed(by: disposeBag)
+
     }
 }
 
@@ -78,5 +90,12 @@ extension SignupViewController {
 
 //MARK: - <SignupViewType>
 extension SignupViewController: SignupViewType {
+    func routeToSignin() {
+        
+    }
+    
+    func routeToHome() {
+        
+    }
     
 }

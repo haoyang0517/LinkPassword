@@ -13,7 +13,9 @@ import SwifterSwift
 final class SigninViewModel: BaseViewModel {
     
     //MARK: - Inputs
-    
+    let signinDidTap = PublishSubject<Void>()
+    let signupDidTap = PublishSubject<Void>()
+
     //MARK: - Outputs
     
     //MARK: - Dependencies
@@ -34,8 +36,19 @@ final class SigninViewModel: BaseViewModel {
     override func transform() {
         super.transform()
         
-                
+        let signinDidTap = signinDidTap
+            .subscribe(onNext: { [weak self] _ in
+                self?.view?.routeToHome()
+            })
+
+        let signupDidTap = signupDidTap
+            .subscribe(onNext: { [weak self] _ in
+                self?.view?.routeToSignup()
+            })
+
         disposeBag.insert(
+            signinDidTap,
+            signupDidTap
         )
     }
 }

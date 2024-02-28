@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SwifterSwift
 
 class SigninViewController: BaseViewController<SigninViewModel> {
     //MARK: - IBOutlets
@@ -62,6 +63,17 @@ class SigninViewController: BaseViewController<SigninViewModel> {
     
     override func subscribe() {
         super.subscribe()
+        
+        signinButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.signinDidTap)
+            .disposed(by: disposeBag)
+        
+        signupTextButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.signupDidTap)
+            .disposed(by: disposeBag)
+
     }
 }
 
@@ -73,5 +85,14 @@ extension SigninViewController {
 
 //MARK: - <SigninViewType>
 extension SigninViewController: SigninViewType {
+    func routeToHome() {
+        let screen = UIStoryboard(name: "MainTabViewController", bundle: nil).instantiateViewController(withIdentifier: "MainTabViewController")
+        SwifterSwift.sharedApplication.keyWindow?.rootViewController = screen
+
+    }
+    
+    func routeToSignup() {
+        
+    }
     
 }

@@ -10,6 +10,8 @@
 		2F089A0D2B8E44E1000E9F56 /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F089A0C2B8E44E1000E9F56 /* Sora-Regular.ttf */; };
 		2F0CB5E92B8E49F4005C871A /* LinkPasswordImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB5E82B8E49F4005C871A /* LinkPasswordImage.swift */; };
 		2F0CB5EB2B8EB5C7005C871A /* Sora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0CB5EA2B8EB5C7005C871A /* Sora-SemiBold.ttf */; };
+		2F0CB5EE2B8ED36A005C871A /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CB5ED2B8ED36A005C871A /* MainTabViewController.swift */; };
+		2F0CB5F02B8ED89B005C871A /* MainTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0CB5EF2B8ED89B005C871A /* MainTabViewController.storyboard */; };
 		2F74FAF72B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAF62B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift */; };
 		2F74FAFA2B8CCD8500FE8DF2 /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAF92B8CCD8500FE8DF2 /* Observable+Ext.swift */; };
 		2F74FAFC2B8CCDBF00FE8DF2 /* RxOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74FAFB2B8CCDBF00FE8DF2 /* RxOperator.swift */; };
@@ -120,6 +122,8 @@
 		2F089A0C2B8E44E1000E9F56 /* Sora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-Regular.ttf"; sourceTree = "<group>"; };
 		2F0CB5E82B8E49F4005C871A /* LinkPasswordImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordImage.swift; sourceTree = "<group>"; };
 		2F0CB5EA2B8EB5C7005C871A /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-SemiBold.ttf"; sourceTree = "<group>"; };
+		2F0CB5ED2B8ED36A005C871A /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		2F0CB5EF2B8ED89B005C871A /* MainTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabViewController.storyboard; sourceTree = "<group>"; };
 		2F74FAF62B8CCD0700FE8DF2 /* UIViewController+RxViewControllerCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxViewControllerCycle.swift"; sourceTree = "<group>"; };
 		2F74FAF92B8CCD8500FE8DF2 /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		2F74FAFB2B8CCDBF00FE8DF2 /* RxOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxOperator.swift; sourceTree = "<group>"; };
@@ -241,6 +245,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F0CB5EC2B8ED2B4005C871A /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2F0CB5EF2B8ED89B005C871A /* MainTabViewController.storyboard */,
+				2F0CB5ED2B8ED36A005C871A /* MainTabViewController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
 		2F74FAF42B8CCCC700FE8DF2 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +396,7 @@
 				2F74FB7D2B8DBF9000FE8DF2 /* SplashMenu */,
 				2F74FB9E2B8E1E1700FE8DF2 /* Signup */,
 				2F74FBAD2B8E1E9300FE8DF2 /* Signin */,
+				2F0CB5EC2B8ED2B4005C871A /* MainTabBar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -861,6 +875,7 @@
 				2F0CB5EB2B8EB5C7005C871A /* Sora-SemiBold.ttf in Resources */,
 				2F7D53302B8C74EB00C73310 /* Assets.xcassets in Resources */,
 				2F7D532B2B8C74EA00C73310 /* Main.storyboard in Resources */,
+				2F0CB5F02B8ED89B005C871A /* MainTabViewController.storyboard in Resources */,
 				2F74FBAC2B8E1E8A00FE8DF2 /* SignupViewController.storyboard in Resources */,
 				2F089A0D2B8E44E1000E9F56 /* Sora-Regular.ttf in Resources */,
 				2F74FB7F2B8DBFA900FE8DF2 /* SplashMenuViewController.storyboard in Resources */,
@@ -991,6 +1006,7 @@
 				2F7D532E2B8C74EA00C73310 /* LinkPassword.xcdatamodeld in Sources */,
 				2F74FB7C2B8DB5A500FE8DF2 /* LinkPasswordColor.swift in Sources */,
 				2F74FB1B2B8CD56E00FE8DF2 /* DisposeOnWillRemoveFromParentType+Extension.swift in Sources */,
+				2F0CB5EE2B8ED36A005C871A /* MainTabViewController.swift in Sources */,
 				2F74FB5D2B8CDDA400FE8DF2 /* AssociatedObjectUtility.swift in Sources */,
 				2F0CB5E92B8E49F4005C871A /* LinkPasswordImage.swift in Sources */,
 				2F74FB692B8DA29500FE8DF2 /* DI+Splash.swift in Sources */,
