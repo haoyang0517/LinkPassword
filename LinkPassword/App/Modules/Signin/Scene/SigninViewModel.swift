@@ -75,6 +75,11 @@ extension SigninViewModel {
     
     func performSignIn(){
         if signIn() {
+            // Set login status to true
+            UserDefaults.isLoggedIn = true
+            // Save username
+            UserDefaults.username = identifier.value
+
             self.view?.routeToHome()
         } else {
             print("fail")
@@ -94,6 +99,7 @@ extension SigninViewModel {
             let users = try context.fetch(fetchRequest) as! [NSManagedObject]
 
             if let user = users.first, let storedPassword = user.value(forKey: "password") as? String {
+                
                 return storedPassword == password.value
             }
         } catch {

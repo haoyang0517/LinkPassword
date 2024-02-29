@@ -16,6 +16,7 @@ class SplashViewController: BaseViewController<SplashViewModel> {
     @IBOutlet weak var lottieView: AnimationView!
     
     //MARK: - Constants
+    
     //MARK: - Vars
     
     //MARK: - Lifecycles
@@ -32,14 +33,9 @@ class SplashViewController: BaseViewController<SplashViewModel> {
         lottieView.loopMode = .playOnce
         lottieView.play { [weak self] (_) in
             guard let self = self else { return }
-            let screen = DI.resolver.resolve(SplashMenuViewControllerType.self)!
-            let nav = BaseNavigationController(rootViewController: screen)
-            SwifterSwift.sharedApplication.keyWindow?.rootViewController = nav
+            self.checkIsLoggedIn()
         }
-
     }
-    
-    
     
     override func setupTransformInput() {
         super.setupTransformInput()
@@ -57,7 +53,17 @@ class SplashViewController: BaseViewController<SplashViewModel> {
 
 //MARK: - Helper
 extension SplashViewController {
-    
+    func checkIsLoggedIn(){
+        if UserDefaults.isLoggedIn {
+            let screen = UIStoryboard(name: "MainTabViewController", bundle: nil).instantiateViewController(withIdentifier: "MainTabViewController")
+            SwifterSwift.sharedApplication.keyWindow?.rootViewController = screen
+        } else {
+            let screen = DI.resolver.resolve(SplashMenuViewControllerType.self)!
+            let nav = BaseNavigationController(rootViewController: screen)
+            SwifterSwift.sharedApplication.keyWindow?.rootViewController = nav
+        }
+
+    }
 }
 
 //MARK: - <SplashViewType>
