@@ -59,11 +59,36 @@ class ChangePasswordViewController: BaseViewController<ChangePasswordViewModel> 
     override func subscribe() {
         super.subscribe()
         
-        changePwButton.rx.tap
+        let changeBtnTap = changePwButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.changePwDidTap)
-            .disposed(by: disposeBag)
 
+        let currentPassword = currentPasswordTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.password)
+
+        let newPassword = newPasswordTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.newPassword)
+
+        let confirmPassword = confirmPasswordTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.confirmPassword)
+
+        let updateBtn = Observable.combineLatest(viewModel.password, viewModel.newPassword, viewModel.confirmPassword)
+            .map { password, newPassword, confirmPassword in
+                print("Combine Latest - Current Password: \(password), New Password: \(newPassword), Confirm Password: \(confirmPassword)")
+                return !password.isEmpty && !newPassword.isEmpty && !confirmPassword.isEmpty && confirmPassword == newPassword
+            }
+            .bind(to: changePwButton.rx.isEnabled)
+
+        disposeBag.insert(
+            updateBtn,
+            changeBtnTap,
+            currentPassword,
+            newPassword,
+            confirmPassword
+        )
     }
 }
 

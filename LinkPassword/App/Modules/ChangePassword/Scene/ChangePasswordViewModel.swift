@@ -15,6 +15,10 @@ final class ChangePasswordViewModel: BaseViewModel {
     //MARK: - Inputs
     let changePwDidTap = PublishSubject<Void>()
 
+    let password = BehaviorRelay<String>(value: "")
+    let newPassword = BehaviorRelay<String>(value: "")
+    let confirmPassword = BehaviorRelay<String>(value: "")
+
     //MARK: - Outputs
     
     //MARK: - Dependencies
@@ -37,7 +41,7 @@ final class ChangePasswordViewModel: BaseViewModel {
         
         let changePwDidTap = changePwDidTap
             .subscribe(onNext: { [weak self] _ in
-                self?.view?.routeToVerification()
+                self?.editPassword()
             })
 
         disposeBag.insert(
@@ -47,4 +51,26 @@ final class ChangePasswordViewModel: BaseViewModel {
 }
 
 extension ChangePasswordViewModel {
+    func editPassword(){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+
+        let coreDataManager = CoreDataManager(context: context)
+        let result = 
+        coreDataManager.checkCurrentPassword(
+            forUsername: UserDefaults.username ?? "",
+            currentPassword: password.value
+        )
+
+        switch result {
+        case .success:
+            print("Current password matched, proceed verification")
+            self.view?.routeToVerification()
+        case .failure(let error):
+            print("Check Password, \(error.localizedDescription)")
+        }
+
+    }
 }

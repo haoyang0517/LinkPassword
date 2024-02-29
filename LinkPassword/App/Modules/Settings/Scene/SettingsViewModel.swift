@@ -35,7 +35,7 @@ final class SettingsViewModel: BaseViewModel {
         SettingSectionEntity(title: "Account", option: [
             SettingOptionEntity(title:"Username",
                                 subTitle: "",
-                                value: "temp username",
+                                value: UserDefaults.username ?? "",
                                 isShowNavigationIcon: nil
                                ),
             SettingOptionEntity(title:"Change Password",
