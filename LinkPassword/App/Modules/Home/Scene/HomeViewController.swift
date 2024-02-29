@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import CoreData
 
 class HomeViewController: BaseViewController<HomeViewModel> {
     //MARK: - IBOutlets
@@ -20,6 +21,7 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     
     //MARK: - Constants
     let categoryFilterCellIdentifier: String = "CategoryFilterCollectionViewCell"
+    let PasswordTableViewCellIdentifier: String = "PasswordTableViewCell"
 
     //MARK: - Vars
     
@@ -31,7 +33,7 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     
     override func setupView() {
         super.setupView()
-
+        titleLabel.text = "Welcome\n \(UserDefaults.username ?? "")!"
         titleLabel.font = LinkPassword.Fonts.soraSemiBold(size: 32)
         categoryTitleLabel.text = "Categories"
         categoryTitleLabel.font = LinkPassword.Fonts.soraRegular(size: 16)
@@ -40,14 +42,14 @@ class HomeViewController: BaseViewController<HomeViewModel> {
             UINib(nibName: categoryFilterCellIdentifier, bundle: Bundle.main),
             forCellWithReuseIdentifier: categoryFilterCellIdentifier
         )
-
+        tableView.register(UINib(nibName: PasswordTableViewCellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: PasswordTableViewCellIdentifier)
     }
     
     override func setupTransformInput() {
         super.setupTransformInput()
         
         viewModel.view = self
-        viewModel.startLoad = self.rx.viewDidLoad
+        viewModel.startLoad = self.rx.viewWillAppear
         viewModel.startExit = self.rx.viewWillDisappear
     }
     
@@ -73,6 +75,17 @@ class HomeViewController: BaseViewController<HomeViewModel> {
                 self?.updateCellAppearance(for: categorySelected)
             })
         
+        let pwDelegate = tableView.rx.setDelegate(self)
+        let pwList = viewModel
+            .passwordsSubject
+            .bind(to: tableView.rx.items(cellIdentifier: PasswordTableViewCellIdentifier)) {
+                index, password, cell in
+                if let pwCell = cell as? PasswordTableViewCell {
+                    pwCell.setupCell(pw: password)
+                }
+                
+            }
+        
         let addBtnDidTap = addButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.addDidTap)
@@ -83,6 +96,8 @@ class HomeViewController: BaseViewController<HomeViewModel> {
             categoryDelegate,
             categoryList,
             categorySelected,
+            pwDelegate,
+            pwList,
             selectedCategoryUpdated,
             addBtnDidTap
         )
@@ -103,11 +118,9 @@ extension HomeViewController {
                 collectionViewCell.isSelected = true
             } else {
                 collectionViewCell.isSelected = false
-
             }
         }
     }
-
 }
 
 //MARK: - <HomeViewType>
@@ -125,4 +138,25 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
         let cellHeight = collectionView.height
         return CGSize(width: cellWidth, height: cellHeight)
     }
+}
+
+//MARK: UITableView Delegate
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 78
+    }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, completionHandler) in
+            self?.viewModel.handleDeleteAction(at: indexPath)
+            completionHandler(true)
+        }
+        deleteAction.image = UIImage(named: "home_delete")
+        deleteAction.backgroundColor = LinkPassword.Colors.BgColor
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = false // Disable full swipe
+
+        return configuration
+    }
+    
 }

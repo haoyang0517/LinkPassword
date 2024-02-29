@@ -111,6 +111,11 @@ extension SettingsViewController {
     }
     
     func logoutAction(){
+        // Set login status to true
+        UserDefaults.isLoggedIn = false
+        // Save username
+        UserDefaults.username = ""
+
         let screen = DI.resolver.resolve(SplashMenuViewControllerType.self)!
         let nav = BaseNavigationController(rootViewController: screen)
         SwifterSwift.sharedApplication.keyWindow?.rootViewController = nav

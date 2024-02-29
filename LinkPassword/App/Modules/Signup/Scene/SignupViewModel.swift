@@ -78,6 +78,12 @@ extension SignupViewModel {
             do {
                 try context.save()
                 // After success save
+                
+                // Set login status to true
+                UserDefaults.isLoggedIn = true
+                // Save username
+                UserDefaults.username = username.value
+
                 self.view?.routeToHome()
             } catch {
                 print("Failed to save user: \(error.localizedDescription)")
