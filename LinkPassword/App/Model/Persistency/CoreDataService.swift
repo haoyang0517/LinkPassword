@@ -47,7 +47,7 @@ class CoreDataManager {
         }
     }
     
-    func updatePassword(forUsername username: String, currentPassword: String, newPassword: String) -> Result<Void, Error> {
+    func updatePassword(forUsername username: String, newPassword: String) -> Result<Void, Error> {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@", username)
 
@@ -57,12 +57,6 @@ class CoreDataManager {
             guard let user = users.first else {
                 // User not found
                 return .failure(CoreDataError.userNotFound)
-            }
-
-            // Check if the current password matches
-            guard user.password == currentPassword else {
-                // Current password doesn't match
-                return .failure(CoreDataError.incorrectCurrentPassword)
             }
 
             // Update the password attribute

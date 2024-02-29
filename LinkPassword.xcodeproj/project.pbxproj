@@ -135,6 +135,9 @@
 		2F7D53482B8C74EB00C73310 /* LinkPasswordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53472B8C74EB00C73310 /* LinkPasswordUITests.swift */; };
 		2F7D534A2B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53492B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift */; };
 		2F8C3CD42B90D426008EF596 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C3CD32B90D426008EF596 /* CoreDataService.swift */; };
+		2F8C3CD62B90DDF2008EF596 /* VerificationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C3CD52B90DDF2008EF596 /* VerificationEnum.swift */; };
+		2F8C3CD92B90E161008EF596 /* status_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C3CD72B90E161008EF596 /* status_success.json */; };
+		2F8C3CDA2B90E161008EF596 /* status_fail.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C3CD82B90E161008EF596 /* status_fail.json */; };
 		2FB1B9102B8E2D1400D5C0F6 /* BarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B90F2B8E2D1400D5C0F6 /* BarItem.swift */; };
 		2FB1B9122B8E2D4E00D5C0F6 /* BarItemViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B9112B8E2D4E00D5C0F6 /* BarItemViewType.swift */; };
 		2FB1B9142B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B9132B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift */; };
@@ -296,6 +299,9 @@
 		2F7D53472B8C74EB00C73310 /* LinkPasswordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordUITests.swift; sourceTree = "<group>"; };
 		2F7D53492B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2F8C3CD32B90D426008EF596 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		2F8C3CD52B90DDF2008EF596 /* VerificationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationEnum.swift; sourceTree = "<group>"; };
+		2F8C3CD72B90E161008EF596 /* status_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = status_success.json; sourceTree = "<group>"; };
+		2F8C3CD82B90E161008EF596 /* status_fail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = status_fail.json; sourceTree = "<group>"; };
 		2FB1B90F2B8E2D1400D5C0F6 /* BarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItem.swift; sourceTree = "<group>"; };
 		2FB1B9112B8E2D4E00D5C0F6 /* BarItemViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItemViewType.swift; sourceTree = "<group>"; };
 		2FB1B9132B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BarItemsViewType.swift"; sourceTree = "<group>"; };
@@ -473,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				2F0CB6262B8EFF0B005C871A /* DI+Verification.swift */,
+				2F8C3CD52B90DDF2008EF596 /* VerificationEnum.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -875,6 +882,8 @@
 		2F74FB902B8DC5ED00FE8DF2 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				2F8C3CD82B90E161008EF596 /* status_fail.json */,
+				2F8C3CD72B90E161008EF596 /* status_success.json */,
 				2F74FB722B8DA82E00FE8DF2 /* splash_lottie.json */,
 			);
 			path = Lottie;
@@ -1200,12 +1209,14 @@
 				2F3622992B906F1D00544C07 /* PasswordTableViewCell.xib in Resources */,
 				2F0CB5F02B8ED89B005C871A /* MainTabViewController.storyboard in Resources */,
 				2F0CB6322B8EFF57005C871A /* ChangePasswordViewController.storyboard in Resources */,
+				2F8C3CD92B90E161008EF596 /* status_success.json in Resources */,
 				2F443EE52B8F81DA00820752 /* AddPasswordViewController.storyboard in Resources */,
 				2F74FBAC2B8E1E8A00FE8DF2 /* SignupViewController.storyboard in Resources */,
 				2F089A0D2B8E44E1000E9F56 /* Sora-Regular.ttf in Resources */,
 				2F0CB6102B8EFE1E005C871A /* DiscoverPasswordViewController.storyboard in Resources */,
 				2F74FB7F2B8DBFA900FE8DF2 /* SplashMenuViewController.storyboard in Resources */,
 				2F74FB732B8DA82E00FE8DF2 /* splash_lottie.json in Resources */,
+				2F8C3CDA2B90E161008EF596 /* status_fail.json in Resources */,
 				2F74FBAF2B8E1EB800FE8DF2 /* SigninViewController.storyboard in Resources */,
 				2F74FB662B8DA27800FE8DF2 /* SplashViewController.storyboard in Resources */,
 				2F0CB6302B8EFF49005C871A /* VerificationViewController.storyboard in Resources */,
@@ -1381,6 +1392,7 @@
 				2F74FB8F2B8DC43500FE8DF2 /* LinkPasswordFont.swift in Sources */,
 				2F26EB192B900C6D00AE31F2 /* String+Extension.swift in Sources */,
 				2F74FB702B8DA2CF00FE8DF2 /* SplashViewTypes.swift in Sources */,
+				2F8C3CD62B90DDF2008EF596 /* VerificationEnum.swift in Sources */,
 				2F74FB412B8CD74500FE8DF2 /* BaseNavigationController.swift in Sources */,
 				2F0CB6202B8EFEDC005C871A /* ChangePasswordViewModel.swift in Sources */,
 				2F74FAFA2B8CCD8500FE8DF2 /* Observable+Ext.swift in Sources */,

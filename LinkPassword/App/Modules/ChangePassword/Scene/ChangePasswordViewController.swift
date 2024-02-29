@@ -97,6 +97,7 @@ class ChangePasswordViewController: BaseViewController<ChangePasswordViewModel> 
 extension ChangePasswordViewController {
     func routeToVerification(){
         let screen = DI.container.resolve(VerificationViewControllerType.self)!
+        screen.newPassword = viewModel.newPassword.value
         screen.modalPresentationStyle = .overFullScreen
         screen.modalTransitionStyle = .crossDissolve
         self.present(screen, animated: true, completion: nil)
