@@ -53,7 +53,7 @@ class SigninViewController: BaseViewController<SigninViewModel> {
         continueWithLabel.font = LinkPassword.Fonts.soraRegular(size: 11)
 
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         performExistingAccountSetupFlows()
@@ -132,7 +132,8 @@ extension SigninViewController: SigninViewType {
     }
     
     func routeToSignup() {
-        
+        let screen = DI.resolver.resolve(SignupViewControllerType.self)!
+        self.navigationController?.pushViewController(screen)
     }
     
 }
