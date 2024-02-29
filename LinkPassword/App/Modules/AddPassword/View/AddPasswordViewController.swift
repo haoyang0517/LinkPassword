@@ -56,7 +56,10 @@ class AddPasswordViewController: BaseViewController<AddPasswordViewModel> {
         typeTitleLabel.text = "Type"
         typeTitleLabel.font = LinkPassword.Fonts.soraRegular(size: 14)
         typeTitleLabel.textColor = LinkPassword.Colors.PrimaryText
-        
+        typeDropDownTextField.dropdownCallback = {
+            self.routeToType()
+        }
+
         webnameTitleLabel.text = "Web Name"
         webnameTitleLabel.font = LinkPassword.Fonts.soraRegular(size: 14)
         webnameTitleLabel.textColor = LinkPassword.Colors.PrimaryText
@@ -95,6 +98,62 @@ class AddPasswordViewController: BaseViewController<AddPasswordViewModel> {
     
     override func subscribe() {
         super.subscribe()
+        
+        let typeChanged = viewModel.type
+            .map { type in
+                return type.rawValue
+            }
+            .bind(to: typeDropDownTextField.rx.text)
+
+        // Bind UI elements to ViewModel
+        let webname = webnameTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.webname)
+
+        let urls = urlTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.urls)
+
+        let username = usernameTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.username)
+        
+        let email = emailTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.email)
+        
+        let password = passwordTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.password)
+
+        let updateBtn = Observable.combineLatest(viewModel.type, viewModel.username, viewModel.email, viewModel.password, viewModel.webname, viewModel.urls)
+            .map { type, webname, url, username, email, password in
+                print("Combine Latest - Type: \(type), Webname: \(webname), url: \(url), Username: \(username), email: \(email), Password: \(password)")
+                return !username.isEmpty && !email.isEmpty && !password.isEmpty && !webname.isEmpty && !url.isEmpty
+            }
+            .bind(to: saveButton.rx.isEnabled)
+
+        let saveBtnTap = saveButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.saveDidTap)
+
+        let cancelBtnTap = cancelButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.cancelDidTap)
+
+
+        disposeBag.insert(
+            typeChanged,
+            webname,
+            urls,
+            username,
+            email,
+            password,
+            updateBtn,
+            saveBtnTap,
+            cancelBtnTap
+        )
+
     }
 }
 
@@ -106,5 +165,38 @@ extension AddPasswordViewController {
 
 //MARK: - <AddPasswordViewType>
 extension AddPasswordViewController: AddPasswordViewType {
+    func routeToType() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let option1 = UIAlertAction(title: "Login", style: .default) { _ in
+            // Handle login selection
+            self.viewModel.type.accept(.login)
+        }
+        
+        let option2 = UIAlertAction(title: "Card", style: .default) { _ in
+            // Handle card selection
+            self.viewModel.type.accept(.card)
+        }
+        
+        let option3 = UIAlertAction(title: "Others", style: .default) { _ in
+            // Handle others selection
+            self.viewModel.type.accept(.others)
+        }
+
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(option1)
+        alertController.addAction(option2)
+        alertController.addAction(option3)
+        alertController.addAction(cancelAction)
+                
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func routeBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
 }

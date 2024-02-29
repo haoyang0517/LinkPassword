@@ -21,7 +21,7 @@ class BaseViewModel: BaseViewModelType, ViewModelType, ReactiveCompatible {
     public var contentReady: Driver<Bool> = .never()
     public var exitWithResult: Driver<DismissResult> = .never()
     //MARK: Dependency
-//    @Injected public var buildConfig: BuildConfigType
+
     @Injected public var Defaults: UserDefaults
     //MARK: State
     

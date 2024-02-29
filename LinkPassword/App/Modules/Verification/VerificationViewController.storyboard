@@ -187,6 +187,9 @@
             <point key="canvasLocation" x="-23" y="86"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Vpd-A2-leK"/>
+    </designables>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

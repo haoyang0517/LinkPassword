@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 enum PasswordCategory: String, CaseIterable {
     case all = "All"
