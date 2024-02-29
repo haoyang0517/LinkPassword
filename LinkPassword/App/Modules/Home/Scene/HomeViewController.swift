@@ -26,6 +26,12 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     //MARK: - Vars
     
     //MARK: - Lifecycles
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        subscribeSpecial()
+    }
+    
     override func loadView() {
         super.loadView()
         viewModel = DI.resolver.resolve(HomeViewModel.self)!
@@ -68,12 +74,6 @@ class HomeViewController: BaseViewController<HomeViewModel> {
             .bind { [weak self] indexPath in
                 self?.viewModel.selectCategory(at: indexPath)
             }
-
-        // Subscribe to the selectedIndexPath observable to update cell appearance
-        let selectedCategoryUpdated = viewModel.selectedCategory
-            .subscribe(onNext: { [weak self] categorySelected in
-                self?.updateCellAppearance(for: categorySelected)
-            })
         
         let pwDelegate = tableView.rx.setDelegate(self)
         let pwList = viewModel
@@ -98,10 +98,21 @@ class HomeViewController: BaseViewController<HomeViewModel> {
             categorySelected,
             pwDelegate,
             pwList,
-            selectedCategoryUpdated,
             addBtnDidTap
         )
 
+    }
+    
+    func subscribeSpecial(){
+        // Late subscribe due to cell isn't loaded
+        // Subscribe to the selectedIndexPath observable to update cell appearance
+        let selectedCategoryUpdated = viewModel.selectedCategory
+            .subscribe(onNext: { [weak self] categorySelected in
+                self?.updateCellAppearance(for: categorySelected)
+            })
+        disposeBag.insert(
+            selectedCategoryUpdated
+        )
     }
 }
 

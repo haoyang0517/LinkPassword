@@ -14,8 +14,8 @@ import CoreData
 final class HomeViewModel: BaseViewModel {
     
     //MARK: - Inputs
-    let categorySubject = BehaviorSubject<[PasswordCategory]>(value: [])
-    let selectedCategorySubject = PublishSubject<PasswordCategory>()
+    let categorySubject = BehaviorSubject<[PasswordCategory]>(value: PasswordCategory.allCases)
+    let selectedCategorySubject = BehaviorSubject<PasswordCategory>(value: .all)
     let passwordsSubject = BehaviorSubject<[Password]>(value: [])
     let addDidTap = PublishSubject<Void>()
 
@@ -39,8 +39,7 @@ final class HomeViewModel: BaseViewModel {
     override init() {
         super.init()
         
-        categorySubject.onNext(PasswordCategory.allCases)
-        selectedCategorySubject.onNext(.all)
+        passwordsSubject.onNext(fetchPasswordsForCurrentUser(selectedCategory: .all))
     }
     
     override func dispose() {
@@ -51,19 +50,21 @@ final class HomeViewModel: BaseViewModel {
     override func transform() {
         super.transform()
         
-        let loadData = startLoad
-            .do(onNext: { [weak self] _ in
-                self?.passwordsSubject.onNext(self?.fetchPasswordsForCurrentUser() ?? [])
-            })
-                        
+        let initialLoadData = Observable.combineLatest(
+            startLoad.asObservable(),
+            selectedCategory
+        )
+        .subscribe(onNext: { [weak self] (_, selectedCategory) in
+            self?.passwordsSubject.onNext(self?.fetchPasswordsForCurrentUser(selectedCategory: selectedCategory) ?? [])
+        })
+        
         let addDidTap = addDidTap
             .subscribe(onNext: { [weak self] _ in
                 self?.view?.routeToAdd()
             })
                         
         disposeBag.insert(
-            loadData.drive(),
-//            setDefaultCategory,
+            initialLoadData,
             addDidTap
         )
     }
@@ -85,7 +86,7 @@ extension HomeViewModel {
 
 // MARK: - Core Data load user data
 extension HomeViewModel {
-    func fetchPasswordsForCurrentUser() -> [Password]? {
+    func fetchPasswordsForCurrentUser(selectedCategory: PasswordCategory?) -> [Password] {        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return []
         }
@@ -93,15 +94,22 @@ extension HomeViewModel {
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<Password>(entityName: "Password")
         
-        fetchRequest.predicate = NSPredicate(format: "user.username == %@ OR user.email == %@", UserDefaults.username ?? "", UserDefaults.username ?? "")
+        var predicates: [NSPredicate] = []
+        predicates.append(NSPredicate(format: "user.username == %@ OR user.email == %@", UserDefaults.username ?? "", UserDefaults.username ?? ""))
+        
+        if let selectedCategory = selectedCategory, selectedCategory != .all {
+            predicates.append(NSPredicate(format: "type == %@", selectedCategory.rawValue))
+        }
+        
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
 
         do {
             let passwords = try context.fetch(fetchRequest)
             print("Passwords for user \(passwords)")
             return passwords
         } catch {
-            print("Error fetching contacts: \(error.localizedDescription)")
-            return nil
+            print("Error fetching passwords: \(error.localizedDescription)")            
+            return []
         }
     }
 
