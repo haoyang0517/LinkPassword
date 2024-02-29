@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import SwifterSwift
 
 class SettingsViewController: BaseViewController<SettingsViewModel> {
     
@@ -110,7 +111,10 @@ extension SettingsViewController {
     }
     
     func logoutAction(){
-        print("logout")
+        let screen = DI.resolver.resolve(SplashMenuViewControllerType.self)!
+        let nav = BaseNavigationController(rootViewController: screen)
+        SwifterSwift.sharedApplication.keyWindow?.rootViewController = nav
+
     }
 }
 
