@@ -11,7 +11,11 @@ import RxCocoa
 
 
 protocol DiscoverPasswordViewType: BaseViewType {
-    
+    var password: Password? { set get }
+
+    func copyUsername()
+    func copyPassword()
+    func dismissDiscover()
 }
 
 typealias DiscoverPasswordViewControllerType = UIViewController & DiscoverPasswordViewType

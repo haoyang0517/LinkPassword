@@ -78,19 +78,21 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         let pwDelegate = tableView.rx.setDelegate(self)
         let pwList = viewModel
             .passwordsSubject
-            .bind(to: tableView.rx.items(cellIdentifier: PasswordTableViewCellIdentifier)) {
+            .bind(to: tableView.rx.items(cellIdentifier: PasswordTableViewCellIdentifier)) { [weak self]
                 index, password, cell in
-                if let pwCell = cell as? PasswordTableViewCell {
-                    pwCell.setupCell(pw: password)
-                }
+                let pwCell = cell as! PasswordTableViewCell
+                pwCell.setupCell(pw: password)
+                pwCell.rx.moreDidTap.map({
+                    self?.routeToDiscoverPassword(password: password)
+                })
+                .drive().disposed(by: pwCell.disposeBag)
+                
                 
             }
         
         let addBtnDidTap = addButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.addDidTap)
-
-
 
         disposeBag.insert(
             categoryDelegate,
@@ -125,7 +127,7 @@ extension HomeViewController {
             guard let collectionViewCell = cell as? CategoryFilterCollectionViewCell else {
                 return
             }
-            if let cellIndexPath = categoryCollectionView.indexPath(for: collectionViewCell), collectionViewCell.titleLabel.text == categorySelected.rawValue  {
+            if let _ = categoryCollectionView.indexPath(for: collectionViewCell), collectionViewCell.titleLabel.text == categorySelected.rawValue  {
                 collectionViewCell.isSelected = true
             } else {
                 collectionViewCell.isSelected = false
@@ -139,6 +141,14 @@ extension HomeViewController: HomeViewType {
     func routeToAdd() {
         let screen = DI.resolver.resolve(AddPasswordViewControllerType.self)!
         self.navigationController?.pushViewController(screen)
+    }
+    
+    func routeToDiscoverPassword(password: Password){
+        let screen = DI.resolver.resolve(DiscoverPasswordViewControllerType.self)!
+        screen.modalPresentationStyle = .overFullScreen
+        screen.modalTransitionStyle = .crossDissolve
+        screen.password = password
+        self.present(screen, animated: false, completion: nil)
     }
 }
 

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class PasswordTableViewCell: UITableViewCell {
 
@@ -14,6 +16,13 @@ class PasswordTableViewCell: UITableViewCell {
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var moreButton: UIButton!
 
+    private(set) var disposeBag = DisposeBag()
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
@@ -21,8 +30,6 @@ class PasswordTableViewCell: UITableViewCell {
         titleLabel.textColor = LinkPassword.Colors.PrimaryText
         valueLabel.font = LinkPassword.Fonts.soraRegular(size: 14)
         valueLabel.textColor = LinkPassword.Colors.SecondaryText
-
-
     }
 
     func setupCell(pw: Password){
@@ -30,4 +37,8 @@ class PasswordTableViewCell: UITableViewCell {
         valueLabel.text = pw.email
     }
     
+}
+
+extension Reactive where Base : PasswordTableViewCell {
+    var moreDidTap: Driver<Void> { return base.moreButton.rx.tap.asDriver() }
 }
