@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SwifterSwift
 
 class SignupViewController: BaseViewController<SignupViewModel> {
     //MARK: - IBOutlets
@@ -23,7 +24,9 @@ class SignupViewController: BaseViewController<SignupViewModel> {
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var appleButton: UIButton!
     @IBOutlet weak var signinTextButton: UIButton!
+    
     //MARK: - Constants
+    
     //MARK: - Vars
     
     //MARK: - Lifecycles
@@ -68,15 +71,47 @@ class SignupViewController: BaseViewController<SignupViewModel> {
     override func subscribe() {
         super.subscribe()
         
-        signupButton.rx.tap
+        // Bind UI elements to ViewModel
+        let username = usernameTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.username)
+        
+        let email = emailTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.email)
+        
+        let password = passwordTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.password)
+
+        let confirmPassword = confirmPasswordTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.confirmPassword)
+
+        let signupBtnTap = signupButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.signupDidTap)
-            .disposed(by: disposeBag)
         
-        signinTextButton.rx.tap
+        let signinBtnTap = signinTextButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.signinDidTap)
-            .disposed(by: disposeBag)
+
+        let updateBtn = Observable.combineLatest(viewModel.username, viewModel.email, viewModel.password, viewModel.confirmPassword)
+            .map { username, email, password, confirmPassword in
+                print("Combine Latest - Username: \(username), email: \(email), Password: \(password) Confirm Password: \(confirmPassword)")
+                return !username.isEmpty && !email.isEmpty && !password.isEmpty && confirmPassword == password /*&& email.isEmpty*/
+            }
+            .bind(to: signupButton.rx.isEnabled)
+
+        disposeBag.insert(
+            username,
+            email,
+            password,
+            confirmPassword,
+            signinBtnTap,
+            signupBtnTap,
+            updateBtn
+        )
 
     }
 }
@@ -90,11 +125,14 @@ extension SignupViewController {
 //MARK: - <SignupViewType>
 extension SignupViewController: SignupViewType {
     func routeToSignin() {
-        
+        let screen = DI.resolver.resolve(SigninViewControllerType.self)!
+        self.navigationController?.pushViewController(screen)
     }
     
     func routeToHome() {
-        
+        let screen = UIStoryboard(name: "MainTabViewController", bundle: nil).instantiateViewController(withIdentifier: "MainTabViewController")
+        SwifterSwift.sharedApplication.keyWindow?.rootViewController = screen
+
     }
     
 }

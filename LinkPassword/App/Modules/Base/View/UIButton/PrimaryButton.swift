@@ -18,18 +18,11 @@ class PrimaryButton: UIButton {
         self.commonInit()
     }
     
-//    override var isEnabled: Bool {
-//        didSet {
-//            self.backgroundColor = isEnabled ? .PrimaryBtnColor : .PrimaryBtnColor
-//        }
-//    }
-//    
-//    override var isHighlighted: Bool {
-//        didSet {
-//            super.isHighlighted = isHighlighted
-//            backgroundColor = isHighlighted ? .PrimaryBtnColor : .PrimaryBtnColor
-//        }
-//    }
+    override var isEnabled: Bool {
+        didSet {
+            self.backgroundColor = isEnabled ? LinkPassword.Colors.PrimaryBtnColor : .lightGray
+        }
+    }
     
     private func commonInit() {
         self.backgroundColor = LinkPassword.Colors.PrimaryBtnColor
