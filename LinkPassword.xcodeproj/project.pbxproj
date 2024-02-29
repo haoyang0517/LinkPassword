@@ -134,6 +134,7 @@
 		2F7D533E2B8C74EB00C73310 /* LinkPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D533D2B8C74EB00C73310 /* LinkPasswordTests.swift */; };
 		2F7D53482B8C74EB00C73310 /* LinkPasswordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53472B8C74EB00C73310 /* LinkPasswordUITests.swift */; };
 		2F7D534A2B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7D53492B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift */; };
+		2F8C3CD42B90D426008EF596 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C3CD32B90D426008EF596 /* CoreDataService.swift */; };
 		2FB1B9102B8E2D1400D5C0F6 /* BarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B90F2B8E2D1400D5C0F6 /* BarItem.swift */; };
 		2FB1B9122B8E2D4E00D5C0F6 /* BarItemViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B9112B8E2D4E00D5C0F6 /* BarItemViewType.swift */; };
 		2FB1B9142B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1B9132B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift */; };
@@ -294,6 +295,7 @@
 		2F7D53432B8C74EB00C73310 /* LinkPasswordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkPasswordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7D53472B8C74EB00C73310 /* LinkPasswordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordUITests.swift; sourceTree = "<group>"; };
 		2F7D53492B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPasswordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F8C3CD32B90D426008EF596 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		2FB1B90F2B8E2D1400D5C0F6 /* BarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItem.swift; sourceTree = "<group>"; };
 		2FB1B9112B8E2D4E00D5C0F6 /* BarItemViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItemViewType.swift; sourceTree = "<group>"; };
 		2FB1B9132B8E2D5700D5C0F6 /* UIViewController+BarItemsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BarItemsViewType.swift"; sourceTree = "<group>"; };
@@ -639,6 +641,7 @@
 				2F74FB332B8CD69B00FE8DF2 /* Architecture */,
 				2F74FB742B8DA88300FE8DF2 /* Constant */,
 				2F74FB952B8DC80A00FE8DF2 /* Helper */,
+				2F8C3CD12B90D3F4008EF596 /* Model */,
 				2F74FB422B8CD75C00FE8DF2 /* Modules */,
 				2F74FB592B8CDD5100FE8DF2 /* Utilities */,
 			);
@@ -892,7 +895,6 @@
 			children = (
 				2F26EB172B900C5900AE31F2 /* Foundation */,
 				2F74FB962B8DC83200FE8DF2 /* UIKit */,
-				2F2E4DFF2B904581007CB9E5 /* UserDefaults+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1036,6 +1038,23 @@
 				2F7D53492B8C74EB00C73310 /* LinkPasswordUITestsLaunchTests.swift */,
 			);
 			path = LinkPasswordUITests;
+			sourceTree = "<group>";
+		};
+		2F8C3CD12B90D3F4008EF596 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F8C3CD22B90D3FC008EF596 /* Persistency */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F8C3CD22B90D3FC008EF596 /* Persistency */ = {
+			isa = PBXGroup;
+			children = (
+				2F8C3CD32B90D426008EF596 /* CoreDataService.swift */,
+				2F2E4DFF2B904581007CB9E5 /* UserDefaults+Extension.swift */,
+			);
+			path = Persistency;
 			sourceTree = "<group>";
 		};
 		2FB1B9172B8E2DF200D5C0F6 /* BarItem */ = {
@@ -1285,6 +1304,7 @@
 				2F443EF12B8F82BE00820752 /* DropDownTextField.swift in Sources */,
 				2F74FB172B8CD54600FE8DF2 /* AppWindow.swift in Sources */,
 				2F74FBB22B8E1F3200FE8DF2 /* DI+Signin.swift in Sources */,
+				2F8C3CD42B90D426008EF596 /* CoreDataService.swift in Sources */,
 				2F0CB6342B8F1588005C871A /* CategoryEnum.swift in Sources */,
 				2F74FB872B8DBFE000FE8DF2 /* SplashMenuViewModel.swift in Sources */,
 				2F74FB0F2B8CD4B400FE8DF2 /* DismissWithResultProtocol+Rx.swift in Sources */,
