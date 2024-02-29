@@ -9,6 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import SwifterSwift
+import CoreData
 
 final class SigninViewModel: BaseViewModel {
     
@@ -17,6 +18,9 @@ final class SigninViewModel: BaseViewModel {
     let signupDidTap = PublishSubject<Void>()
     let signinWithAppleDidTap = PublishSubject<Void>()
     let signinWithGoogleDidTap = PublishSubject<Void>()
+
+    let identifier = BehaviorRelay<String>(value: "")
+    let password = BehaviorRelay<String>(value: "")
 
     //MARK: - Outputs
     
@@ -40,7 +44,7 @@ final class SigninViewModel: BaseViewModel {
         
         let signinDidTap = signinDidTap
             .subscribe(onNext: { [weak self] _ in
-                self?.view?.routeToHome()
+                self?.performSignIn()
             })
 
         let signupDidTap = signupDidTap
@@ -55,7 +59,7 @@ final class SigninViewModel: BaseViewModel {
 
         let signinWithGoogleDidTap = signinWithGoogleDidTap
             .subscribe(onNext: { [weak self] _ in
-                self?.view?.signinWithApple()
+                self?.view?.signinWithGoogle()
             })
 
         disposeBag.insert(
@@ -68,4 +72,35 @@ final class SigninViewModel: BaseViewModel {
 }
 
 extension SigninViewModel {
+    
+    func performSignIn(){
+        if signIn() {
+            self.view?.routeToHome()
+        } else {
+            print("fail")
+        }
+    }
+    
+    func signIn() -> Bool {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return false
+        }
+
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        fetchRequest.predicate = NSPredicate(format: "username == %@ OR email == %@", identifier.value, identifier.value)
+
+        do {
+            let users = try context.fetch(fetchRequest) as! [NSManagedObject]
+
+            if let user = users.first, let storedPassword = user.value(forKey: "password") as? String {
+                return storedPassword == password.value
+            }
+        } catch {
+            print("Error fetching user: \(error.localizedDescription)")
+        }
+
+        return false
+    }
+
 }

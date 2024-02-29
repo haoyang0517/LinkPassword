@@ -70,26 +70,74 @@ class SigninViewController: BaseViewController<SigninViewModel> {
     override func subscribe() {
         super.subscribe()
         
-        signinButton.rx.tap
+        let identifier = usernameTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.identifier)
+                
+        let password = passwordTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.password)
+
+        let signinBtnTap = signinButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.signinDidTap)
-            .disposed(by: disposeBag)
         
-        signupTextButton.rx.tap
+        let signupBtnTap = signupTextButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.signupDidTap)
-            .disposed(by: disposeBag)
+        
+        let appleBtnTap = appleButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
+            .bind(to: viewModel.signinWithAppleDidTap)
 
-        appleButton.rx.tap
+        let googleBtnTap = googleButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
-            .bind(to: viewModel.signupDidTap)
-            .disposed(by: disposeBag)
+            .bind(to: viewModel.signinWithGoogleDidTap)
+
+        let updateBtn = Observable.combineLatest(viewModel.identifier, viewModel.password)
+            .map { identifier, password in
+                print("Combine Latest - Identifier: \(identifier), Password: \(password)")
+                return !identifier.isEmpty && !password.isEmpty
+            }
+            .bind(to: signinButton.rx.isEnabled)
+
+        disposeBag.insert(
+            identifier,
+            password,
+            signinBtnTap,
+            signupBtnTap,
+            appleBtnTap,
+            googleBtnTap,
+            updateBtn
+        )
 
     }
 }
 
+//MARK: - <SigninViewType>
+extension SigninViewController: SigninViewType {
+    func signinWithApple() {
+        print("signin apple")
+//        performAppleSignIn()
+    }
+    
+    func signinWithGoogle() {
+        print("signin google")
+    }
+    
+    func routeToHome() {
+        let screen = UIStoryboard(name: "MainTabViewController", bundle: nil).instantiateViewController(withIdentifier: "MainTabViewController")
+        SwifterSwift.sharedApplication.keyWindow?.rootViewController = screen
 
-//MARK: - Helper
+    }
+    
+    func routeToSignup() {
+        
+    }
+    
+}
+
+//MARK: - Apple Login Helper (can't work rn)
 extension SigninViewController: ASAuthorizationControllerDelegate {
 
     // - Tag: perform_appleid_password_request
@@ -126,26 +174,12 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
             let email = appleIDCredential.email
 
             // Perform user registration or sign up logic
-            signUpUser(userIdentifier: userIdentifier, fullName: fullName, email: email)
+            signInUser(userIdentifier: userIdentifier, fullName: fullName, email: email)
         }
     }
 
-    func signUpUser(userIdentifier: String, fullName: PersonNameComponents?, email: String?) {
+    func signInUser(userIdentifier: String, fullName: PersonNameComponents?, email: String?) {
         print(userIdentifier, fullName, email)
-        // Implement your user signup logic here
-        // You may want to send the userIdentifier, fullName, and email to your backend for registration
-
-        // For example, you can create a user object and store it locally or send it to your server
-        //        let newUser = User(identifier: userIdentifier, fullName: fullName, email: email)
-
-        // Now you can use the newUser object as needed in your app
-        // ...
-
-        // Optionally, perform any additional setup or UI updates for the signed-up user
-        // ...
-
-        // Finally, navigate to the main content of your app or perform any other relevant actions
-        // ...
     }
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
@@ -160,24 +194,3 @@ extension SigninViewController: ASAuthorizationControllerPresentationContextProv
     }
 }
 
-//MARK: - <SigninViewType>
-extension SigninViewController: SigninViewType {
-    func signinWithApple() {
-        performAppleSignIn()
-    }
-    
-    func signinWithGoogle() {
-        
-    }
-    
-    func routeToHome() {
-        let screen = UIStoryboard(name: "MainTabViewController", bundle: nil).instantiateViewController(withIdentifier: "MainTabViewController")
-        SwifterSwift.sharedApplication.keyWindow?.rootViewController = screen
-
-    }
-    
-    func routeToSignup() {
-        
-    }
-    
-}
