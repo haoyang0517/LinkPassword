@@ -52,14 +52,8 @@ final class ChangePasswordViewModel: BaseViewModel {
 
 extension ChangePasswordViewModel {
     func editPassword(){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        let context = appDelegate.persistentContainer.viewContext
-
-        let coreDataManager = CoreDataManager(context: context)
         let result = 
-        coreDataManager.checkCurrentPassword(
+        CoreDataManager.shared.checkCurrentPassword(
             forUsername: UserDefaults.username ?? "",
             currentPassword: password.value
         )
@@ -69,7 +63,7 @@ extension ChangePasswordViewModel {
             print("Current password matched, proceed verification")
             self.view?.routeToVerification()
         case .failure(let error):
-            print("Check Password, \(error.localizedDescription)")
+            print("Check Password Fail, \(error.localizedDescription)")
         }
 
     }

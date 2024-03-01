@@ -64,47 +64,20 @@ final class AddPasswordViewModel: BaseViewModel {
 
 extension AddPasswordViewModel {
     func savePasswordForUser() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
+        let result = CoreDataManager.shared.savePasswordForUser(
+            type: type.value,
+            webname: webname.value,
+            urls: urls.value,
+            username: username.value,
+            email: email.value,
+            password: password.value
+        )
 
-        let context = appDelegate.persistentContainer.viewContext
-
-        guard let usernameToFetch = UserDefaults.username else {
-            print("UserDefaults username is nil")
-            return
-        }
-
-        let fetchRequest = NSFetchRequest<User>(entityName: "User")
-        fetchRequest.predicate = NSPredicate(format: "username == %@ OR email == %@", usernameToFetch, usernameToFetch)
-
-        do {
-            let users = try context.fetch(fetchRequest)
-
-            if let user = users.first {
-                let newPassword = Password(context: context)
-                newPassword.type = type.value.rawValue
-                newPassword.webname = webname.value
-                newPassword.urls = urls.value
-                newPassword.username = username.value
-                newPassword.email = email.value
-                newPassword.password = password.value
-
-                // Add the password to the user's passwords
-                user.addToPasswords(newPassword)
-
-                // Save the changes
-                try context.save()
-
-                print("Password saved for user \(usernameToFetch)")
-                
-                self.view?.routeBack()
-                
-            } else {
-                print("User not found for username \(usernameToFetch)")
-            }
-        } catch {
-            print("Error fetching user: \(error.localizedDescription)")
+        switch result {
+        case .success:
+            self.view?.routeBack()
+        case .failure(let error):
+            print("Error saving password: \(error.localizedDescription)")
         }
     }
 

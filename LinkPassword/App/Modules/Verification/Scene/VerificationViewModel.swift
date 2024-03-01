@@ -65,14 +65,8 @@ final class VerificationViewModel: BaseViewModel {
 
 extension VerificationViewModel {
     func updatePassword(){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        let context = appDelegate.persistentContainer.viewContext
-
-        let coreDataManager = CoreDataManager(context: context)
         let result =
-        coreDataManager.updatePassword(
+        CoreDataManager.shared.updatePassword(
             forUsername: UserDefaults.username ?? "",
             newPassword: newPassword.value
         )
@@ -84,7 +78,5 @@ extension VerificationViewModel {
             currentStage.accept(.three(false))
 
         }
-
     }
-
 }
