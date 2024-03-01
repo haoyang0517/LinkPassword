@@ -62,33 +62,16 @@ final class SignupViewModel: BaseViewModel {
 extension SignupViewModel {
     
     func signup(){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
+        let result = CoreDataManager.shared.signup(username: username.value, email: email.value, password: password.value)
+        switch result {
+        case .success(let success):
+            // Store user info to userdefaults
+            UserDefaults.isLoggedIn = true
+            UserDefaults.username = username.value
+            // Navigate
+            self.view?.routeToHome()
+        case .failure(let error):
+            print("Failed to save user: \(error.localizedDescription)")
         }
-
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
-
-        if let userEntity = entity {
-            let user = NSManagedObject(entity: userEntity, insertInto: context)
-            user.setValue(username.value, forKey: "username")
-            user.setValue(email.value, forKey: "email")
-            user.setValue(password.value, forKey: "password")
-
-            do {
-                try context.save()
-                // After success save
-                
-                // Set login status to true
-                UserDefaults.isLoggedIn = true
-                // Save username
-                UserDefaults.username = username.value
-
-                self.view?.routeToHome()
-            } catch {
-                print("Failed to save user: \(error.localizedDescription)")
-            }
-        }
-
     }
 }

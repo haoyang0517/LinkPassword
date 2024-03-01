@@ -87,26 +87,15 @@ extension SigninViewModel {
     }
     
     func signIn() -> Bool {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        let result = CoreDataManager.shared.signIn(identifier: identifier.value, password: password.value)
+        switch result {
+        case .success(let success):
+            // Return is password match when found user.
+            return success
+        case .failure(let error):
+            print("Failed to login: \(error.localizedDescription)")
             return false
         }
-
-        let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        fetchRequest.predicate = NSPredicate(format: "username == %@ OR email == %@", identifier.value, identifier.value)
-
-        do {
-            let users = try context.fetch(fetchRequest) as! [NSManagedObject]
-
-            if let user = users.first, let storedPassword = user.value(forKey: "password") as? String {
-                
-                return storedPassword == password.value
-            }
-        } catch {
-            print("Error fetching user: \(error.localizedDescription)")
-        }
-
-        return false
     }
 
 }
