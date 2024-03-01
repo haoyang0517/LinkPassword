@@ -11,6 +11,7 @@ import RxCocoa
 import SwifterSwift
 
 class SignupViewController: BaseViewController<SignupViewModel> {
+    
     //MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!

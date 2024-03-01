@@ -11,6 +11,7 @@ import RxCocoa
 import Lottie
 
 class VerificationViewController: BaseViewController<VerificationViewModel> {
+    
     //MARK: - IBOutlets
     @IBOutlet weak var inputContainer: UIStackView!
     @IBOutlet weak var emailContainer: UIStackView!
@@ -155,9 +156,9 @@ extension VerificationViewController {
 
 //MARK: - <VerificationViewType>
 extension VerificationViewController: VerificationViewType {
+    
     func routeBack() {
         self.dismiss(animated: true)
     }
-    
     
 }

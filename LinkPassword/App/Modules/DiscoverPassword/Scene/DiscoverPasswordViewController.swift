@@ -33,8 +33,10 @@ class DiscoverPasswordViewController: BaseViewController<DiscoverPasswordViewMod
     
     override func setupView() {
         super.setupView()
+        
         view.backgroundColor = .clear
         containerView.layer.cornerRadius = 20
+        
         titleLabel.textColor = LinkPassword.Colors.PrimaryText
         titleLabel.font = LinkPassword.Fonts.soraSemiBold(size: 18)
         titleLabel.text = password?.webname

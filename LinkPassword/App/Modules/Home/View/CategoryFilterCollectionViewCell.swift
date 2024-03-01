@@ -31,8 +31,6 @@ class CategoryFilterCollectionViewCell: UICollectionViewCell {
 
     func setupView(title: String) {
         titleLabel.text = title
-        self.isSelected = isSelected
-        
     }
 
 }

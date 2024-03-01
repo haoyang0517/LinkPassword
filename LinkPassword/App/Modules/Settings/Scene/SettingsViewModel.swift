@@ -60,7 +60,6 @@ final class SettingsViewModel: BaseViewModel {
                                 value: "English",
                                 isShowNavigationIcon: nil
                                )
-
         ]),
         SettingSectionEntity(title: "", option: [
             SettingOptionEntity(title:"Log Out",
@@ -68,7 +67,6 @@ final class SettingsViewModel: BaseViewModel {
                                 value: "",
                                 isShowNavigationIcon: LinkPassword.Images.settings_logout
                                ),
-
         ])
     ]
 
@@ -104,7 +102,6 @@ extension SettingsViewModel {
                 self?.selectedSettingSubject.onNext(selectedItem)
             })
             .disposed(by: disposeBag)
-
     }
 
 }

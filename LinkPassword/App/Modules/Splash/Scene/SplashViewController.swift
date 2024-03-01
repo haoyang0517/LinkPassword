@@ -12,6 +12,7 @@ import Lottie
 import SwifterSwift
 
 class SplashViewController: BaseViewController<SplashViewModel> {
+    
     //MARK: - IBOutlets
     @IBOutlet weak var lottieView: AnimationView!
     

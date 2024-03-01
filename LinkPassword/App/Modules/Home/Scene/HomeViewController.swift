@@ -11,6 +11,7 @@ import RxCocoa
 import CoreData
 
 class HomeViewController: BaseViewController<HomeViewModel> {
+    
     //MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var searchButton: UIButton!
@@ -39,11 +40,13 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     
     override func setupView() {
         super.setupView()
+        
         titleLabel.text = "Welcome\n \(UserDefaults.username ?? "")!"
         titleLabel.font = LinkPassword.Fonts.soraSemiBold(size: 32)
         categoryTitleLabel.text = "Categories"
         categoryTitleLabel.font = LinkPassword.Fonts.soraRegular(size: 16)
         categoryTitleLabel.textColor = LinkPassword.Colors.SecondaryText
+        
         categoryCollectionView.register(
             UINib(nibName: categoryFilterCellIdentifier, bundle: Bundle.main),
             forCellWithReuseIdentifier: categoryFilterCellIdentifier
@@ -68,8 +71,6 @@ class HomeViewController: BaseViewController<HomeViewModel> {
                 filterCell.setupView(title: category.rawValue)
             }
         }
-
-        // Bind item selection to the ViewModel
         let categorySelected = categoryCollectionView.rx.itemSelected
             .bind { [weak self] indexPath in
                 self?.viewModel.selectCategory(at: indexPath)
@@ -86,8 +87,6 @@ class HomeViewController: BaseViewController<HomeViewModel> {
                     self?.routeToDiscoverPassword(password: password)
                 })
                 .drive().disposed(by: pwCell.disposeBag)
-                
-                
             }
         
         let addBtnDidTap = addButton.rx.tap

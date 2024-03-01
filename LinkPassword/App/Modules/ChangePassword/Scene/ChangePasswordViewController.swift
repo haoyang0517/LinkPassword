@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 class ChangePasswordViewController: BaseViewController<ChangePasswordViewModel> {
+    
     //MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var currentPasswordTextField: CustomIconTextField!
@@ -17,7 +18,9 @@ class ChangePasswordViewController: BaseViewController<ChangePasswordViewModel> 
     @IBOutlet weak var confirmPasswordTextField: CustomIconTextField!
 
     @IBOutlet weak var changePwButton: PrimaryButton!
+    
     //MARK: - Constants
+    
     //MARK: - Vars
     
     //MARK: - Lifecycles

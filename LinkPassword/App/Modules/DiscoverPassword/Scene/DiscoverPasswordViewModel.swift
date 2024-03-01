@@ -17,7 +17,6 @@ final class DiscoverPasswordViewModel: BaseViewModel {
     let passwordCopyDidTap = PublishSubject<Void>()
     let outsideCloseDidTap = PublishSubject<Void>()
 
-
     //MARK: - Outputs
     
     //MARK: - Dependencies

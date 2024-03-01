@@ -22,7 +22,6 @@ class SettingsViewController: BaseViewController<SettingsViewModel> {
     //MARK: - Vars
 
     //MARK: - Lifecycles
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }

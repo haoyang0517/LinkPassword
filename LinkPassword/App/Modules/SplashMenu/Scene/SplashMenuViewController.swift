@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 class SplashMenuViewController: BaseViewController<SplashMenuViewModel> {
+    
     //MARK: - IBOutlets
     @IBOutlet weak var logoImageView: UIImageView!
     
@@ -52,16 +53,18 @@ class SplashMenuViewController: BaseViewController<SplashMenuViewModel> {
     override func subscribe() {
         super.subscribe()
         
-        signupButton.rx.tap
+        let signupTap = signupButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.signupDidTap)
-            .disposed(by: disposeBag)
         
-        signinButton.rx.tap
+        let signinTap = signinButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.signinDidTap)
-            .disposed(by: disposeBag)
 
+        disposeBag.insert(
+            signupTap,
+            signinTap
+        )
     }
 }
 

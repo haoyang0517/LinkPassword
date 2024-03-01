@@ -12,6 +12,7 @@ import SwifterSwift
 import AuthenticationServices
 
 class SigninViewController: BaseViewController<SigninViewModel> {
+    
     //MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
@@ -25,6 +26,7 @@ class SigninViewController: BaseViewController<SigninViewModel> {
     @IBOutlet weak var signupTextButton: UIButton!
     
     //MARK: - Constants
+    
     //MARK: - Vars
     
     //MARK: - Lifecycles
@@ -56,7 +58,7 @@ class SigninViewController: BaseViewController<SigninViewModel> {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        performExistingAccountSetupFlows()
+//        performExistingAccountSetupFlows()
     }
     
     override func setupTransformInput() {

@@ -10,12 +10,13 @@ import RxSwift
 import RxCocoa
 
 class AddPasswordViewController: BaseViewController<AddPasswordViewModel> {
+    
     //MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
+    
     @IBOutlet weak var typeTitleLabel: UILabel!
     @IBOutlet weak var typeDropDownTextField: DropdownTextField!
-    
     
     @IBOutlet weak var webnameTitleLabel: UILabel!
     @IBOutlet weak var webnameTextField: CustomTextField!
@@ -25,13 +26,16 @@ class AddPasswordViewController: BaseViewController<AddPasswordViewModel> {
 
     @IBOutlet weak var usernameTitleLabel: UILabel!
     @IBOutlet weak var usernameTextField: CustomIconTextField!
+    
     @IBOutlet weak var emailTitleLabel: UILabel!
     @IBOutlet weak var emailTextField: CustomIconTextField!
+    
     @IBOutlet weak var passwordTitleLabel: UILabel!
     @IBOutlet weak var passwordTextField: CustomIconTextField!
 
     @IBOutlet weak var saveButton: PrimaryButton!
     @IBOutlet weak var cancelButton: UIButton!
+    
     //MARK: - Constants
     
     //MARK: - Vars
@@ -141,7 +145,6 @@ class AddPasswordViewController: BaseViewController<AddPasswordViewModel> {
             .throttle(.seconds(1), scheduler: MainScheduler.asyncInstance)
             .bind(to: viewModel.cancelDidTap)
 
-
         disposeBag.insert(
             typeChanged,
             webname,
@@ -153,7 +156,6 @@ class AddPasswordViewController: BaseViewController<AddPasswordViewModel> {
             saveBtnTap,
             cancelBtnTap
         )
-
     }
 }
 
@@ -182,7 +184,6 @@ extension AddPasswordViewController: AddPasswordViewType {
             // Handle others selection
             self.viewModel.type.accept(.others)
         }
-
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         

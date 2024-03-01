@@ -110,7 +110,6 @@ extension HomeViewModel {
                 // Update UI by removing the item from the observable
                 currentPasswords.remove(at: indexPath.row)
 
-                // Make sure to dispatch UI updates on the main thread
                 DispatchQueue.main.async {
                     self.passwordsSubject.onNext(currentPasswords)
                 }
